@@ -60,14 +60,15 @@ document.addEventListener('DOMContentLoaded', () => {
       title: "Hari 1: Auto Layout & Tombol Responsif",
       time: "15 mnt",
       concepts: ["#AutoLayout", "#Constraints", "#Padding", "#CornerRadius"],
-      objective: "Kuasai Figma Auto Layout untuk membuat tombol yang sepenuhnya responsif — menyesuaikan panjang teks secara otomatis sambil mempertahankan padding yang konsisten.",
+      objective: "Kuasai Figma Auto Layout untuk membuat tombol yang sepenuhnya responsif - menyesuaikan panjang teks secara otomatis sambil mempertahankan padding yang konsisten.",
       dim: "Menyesuaikan otomatis", radius: "999px (Penuh)", color: "HSL(345, 90%, 68%)",
       steps: [
-        "1. Tekan 'T' dan ketik 'Kirim Cinta ❤️' dengan font Inter (16px, SemiBold).",
-        "2. Dengan teks terpilih, tekan Shift + A untuk menerapkan Auto Layout.",
-        "3. Di panel Auto Layout, atur Padding Horizontal ke 24px dan Padding Vertikal ke 12px.",
-        "4. Atur Fill ke HSL(345, 90%, 68%) dan Corner Radius ke 999px.",
-        "5. Ubah teks menjadi kalimat yang lebih panjang — verifikasi tombol melebar otomatis!"
+        "1. Teks Dasar: Tekan shortcut 'T' pada keyboard, klik area kosong di kanvas, lalu ketik 'Kirim Cinta ❤️'. Di panel kanan (Text), ubah font ke Inter, ukuran 16px, dan ketebalan SemiBold.",
+        "2. Konversi ke Auto Layout: Pastikan teks masih terpilih, lalu tekan pintasan Shift + A. Ini akan otomatis membungkus teks dalam sebuah Frame (bingkai) dengan sifat Auto Layout.",
+        "3. Atur Jarak (Padding): Lihat panel kanan pada bagian 'Auto Layout'. Atur Horizontal padding (ikon panah kiri-kanan) menjadi 24px, dan Vertical padding (ikon panah atas-bawah) menjadi 12px.",
+        "4. Mewarnai Tombol: Gulir ke bawah pada panel kanan ke bagian 'Fill', klik tanda '+'. Ubah kode warnanya menjadi HSL(345, 90%, 68%) atau ketik hex warna kesukaanmu.",
+        "5. Membuat Sudut Membulat: Pindah ke bagian atas panel kanan (tepat di bawah X/Y dan W/H), cari kotak dengan ikon lengkungan (Corner Radius), dan ketik 999 untuk membuatnya bulat sempurna (Pill shape).",
+        "6. Uji Responsivitas: Ketik teks tambahan pada tombol tersebut. Perhatikan bagaimana bingkai tombol otomatis memanjang mengikuti teks tanpa merusak proporsi padding!"
       ],
       tip: "Tekan Shift + A untuk langsung membungkus layer apa pun dalam Auto Layout. Ini pintasan paling kuat di Figma!",
       videoUrl: "https://www.youtube.com/embed/7TF2ZmtkZz0",
@@ -81,14 +82,14 @@ document.addEventListener('DOMContentLoaded', () => {
       objective: "Buat kartu kaca tembus pandang yang canggih menggunakan beberapa lapisan bayangan dan keburaman latar belakang untuk sentuhan premium.",
       dim: "320px x 200px", radius: "24px", color: "RGBA(255,255,255,0.4)",
       steps: [
-        "1. Gambar persegi panjang (320x200px), atur Corner Radius ke 24px.",
-        "2. Atur Fill ke Putih (#FFFFFF) dan kurangi opasitas layer ke 40%.",
-        "3. Tambahkan efek 'Background Blur' dan atur kekuatan blur ke 24px.",
-        "4. Tambahkan Inner Shadow (Putih, 20% opasitas, Y: 1, Blur: 0) untuk sorotan tepi kaca.",
-        "5. Tambahkan Drop Shadow (Hitam, 10% opasitas, Y: 12, Blur: 32) untuk elevasi realistis.",
-        "6. Letakkan bentuk berwarna cerah di belakang kartu untuk melihat efek frosted glass."
+        "1. Gambar Kanvas Utama: Tekan 'R' (Rectangle) dan gambar kotak berukuran 320x200px. Pada panel kanan (Properties), atur Corner Radius menjadi 24px agar melengkung manis.",
+        "2. Efek Transparansi Kaca: Buka bagian 'Fill', pilih warna Putih (#FFFFFF), dan ubah angka persentase Opacity (sebelah hex warna) menjadi 40%.",
+        "3. Menambahkan Efek Buram (Blur): Cari bagian 'Effects' di panel kanan, klik tombol '+'. Ubah tipe efek dari 'Drop Shadow' menjadi 'Background Blur'. Klik ikon matahari di sebelahnya dan atur kekuatan blur ke angka 24.",
+        "4. Menambahkan Cahaya Tepi (Inner Shadow): Klik '+' lagi pada 'Effects', pilih 'Inner Shadow'. Klik ikon matahari: ubah warnanya menjadi Putih murni, Opacity 20%, X: 0, Y: 1, dan Blur: 0. Ini memberi kesan pantulan cahaya di ujung atas kaca.",
+        "5. Bayangan Melayang (Drop Shadow): Klik '+' sekali lagi, biarkan di 'Drop Shadow'. Atur warnanya Hitam (#000000), Opacity 10%, Y: 12, Blur: 32. Efek ini mengangkat kartu dari latar belakangnya.",
+        "6. Tes Pandangan Tembus: Gambar bentuk abstrak (misalnya lingkaran berwarna cerah dengan 'O') dan letakkan tepat di belakang (layer lebih bawah) dari kartu kacamu. Kaca glassmorphism-mu sudah selesai!"
       ],
-      tip: "Background Blur hanya terlihat jika opasitas Fill kurang dari 100% DAN ada konten di bawah frame!",
+      tip: "Background Blur HANYA akan terlihat jika opasitas pada bagian 'Fill' (bukan opasitas layer utuh) berada di bawah 100%, DAN harus ada objek dengan warna tegas di belakangnya!",
       videoUrl: "https://www.youtube.com/embed/zzhSFobLkYw",
       externalLink: "https://www.youtube.com/watch?v=zzhSFobLkYw"
     },
@@ -100,520 +101,498 @@ document.addEventListener('DOMContentLoaded', () => {
       objective: "Bangun hierarki tipografi yang kuat dengan menggabungkan font serif tampilan dan sans-serif yang mudah dibaca.",
       dim: "Kolom lebar 340px", radius: "16px", color: "#2C2C2C & #757575",
       steps: [
-        "1. Buat judul H1 dengan 'Playfair Display' 40px (Bold, line-height 110%, spasi -1%).",
-        "2. Buat sub-judul H2 dengan 'Inter' 18px (Medium, #757575, line-height 130%).",
-        "3. Buat paragraf bodi dengan 'Inter' 15px (Regular, line-height 150%).",
-        "4. Pilih semua layer teks, tekan Shift + A untuk membuat kolom Auto Layout.",
-        "5. Atur jarak antar item ke 16px, lalu sesuaikan jarak H1-H2 menjadi 8px."
+        "1. Judul Utama (Heading 1): Tekan 'T', klik kanvas. Tulis judul menarik. Di panel Text, set font ke 'Playfair Display' (atau Serif elegan lain), ukuran 40px, gaya Bold. Atur Line-height (Tinggi baris) ke 110% dan Letter-spacing (Jarak huruf) ke -1% untuk kesan padat dan mewah.",
+        "2. Sub-judul (Heading 2): Buat teks baru. Set font ke 'Inter' (Sans-serif), ukuran 18px, Medium. Ubah warna 'Fill' menjadi abu-abu medium (#757575), dan Line-height ke 130%.",
+        "3. Teks Tubuh (Body Paragraph): Buat blok teks panjang (tekan dan seret 'T' untuk membentuk Text Box). Set font ke 'Inter', ukuran 15px, Regular. Atur Line-height ke 150% agar sangat nyaman dibaca.",
+        "4. Pengelompokan Otomatis: Blok/Pilih ketiga layer teks tersebut di kanvas, lalu tekan Shift + A (Auto Layout). Ini mengubah mereka menjadi tumpukan (stack) vertikal rapi.",
+        "5. Penyesuaian Jarak: Di panel Auto Layout kanan, atur jarak vertikal (gap) antara semua item menjadi 16px. Hierarki visualmu sekarang terlihat seimbang secara profesional!"
       ],
-      tip: "Gunakan line-height ketat (110-120%) untuk judul besar, dan longgar (140-160%) untuk paragraf bodi.",
-      videoUrl: "https://www.youtube.com/embed/O3gwSmExW1Q",
-      externalLink: "https://www.youtube.com/watch?v=O3gwSmExW1Q"
+      tip: "Gunakan persentase (misal: 150%) untuk Line Height. Ini membuat spasi antar baris akan menyesuaikan sendiri secara proporsional walau kamu memperbesar atau memperkecil ukuran font!",
+      videoUrl: "https://www.youtube.com/embed/qZ-305tA5F4",
+      externalLink: "https://www.youtube.com/watch?v=qZ-305tA5F4"
     },
     {
       day: 4, level: "beginner", levelLabel: "Pemula 🐣",
-      title: "Hari 4: Jaringan Vektor & Ikon Hati Kustom",
-      time: "25 mnt",
-      concepts: ["#VectorIcons", "#BooleanUnion", "#PenTool", "#CustomShapes"],
-      objective: "Gunakan operasi Boolean dan alat Pen untuk membuat ikon hati kustom yang sempurna piksel.",
-      dim: "Ikon 64px x 64px", radius: "Vector Smooth", color: "Gradien #FF758C → #FF7EB3",
+      title: "Hari 4: Komponen Induk (Master Components)",
+      time: "15 mnt",
+      concepts: ["#Components", "#Reusability", "#DesignSystems"],
+      objective: "Pelajari cara membuat Komponen Induk untuk aset yang dapat digunakan kembali, memastikan konsistensi.",
+      dim: "Menyesuaikan otomatis", radius: "Variabel", color: "Bervariasi",
       steps: [
-        "1. Aktifkan kisi layout (Shift + G) dan atur ke 1px untuk presisi tinggi.",
-        "2. Gambar dua lingkaran sempurna (40x40px) yang tumpang tindih 50% secara horizontal.",
-        "3. Gambar segitiga, balik vertikal, posisikan menghubungkan lengkung bawah lingkaran.",
-        "4. Pilih ketiga bentuk, klik dropdown Boolean Groups, pilih 'Union Selection'.",
-        "5. Klik dua kali untuk masuk Vector Network, pilih simpul bawah, tambahkan corner radius 2px.",
-        "6. Terapkan isian gradien linier (Coral ke Magenta) pada sudut 45 derajat."
+        "1. Buat Objek Dasar: Buat sebuah tombol cantik (lengkap dengan teks, ikon, Fill, Auto Layout, dan Radius) persis seperti yang kita buat di Hari 1.",
+        "2. Ubah Menjadi Master Component: Pilih frame tombol tersebut, lalu lihat ke bar bagian atas-tengah di layar Figma. Klik ikon berbentuk Empat Wajik (Create Component), atau tekan shortcut sakti Ctrl+Alt+K (Win) / Cmd+Option+K (Mac).",
+        "3. Verifikasi Induk: Perhatikan panel 'Layers' di sebelah kiri. Ikon untuk tombolmu kini berubah menjadi empak wajik berwarna ungu penuh. Ini berarti ia adalah 'Main Component' (Komponen Induk).",
+        "4. Membuat Kloningan (Instances): Tahan tombol Alt (Win) / Option (Mac) di keyboardmu, lalu klik dan seret komponen induk tadi ke tempat lain. Kamu baru saja menciptakan anak komponen ('Instance') dengan ikon wajik berongga tunggal.",
+        "5. Eksperimen Sinkronisasi: Ubah warna Fill atau ketebalan garis hanya pada 'Komponen Induk'. Saksikan keajaibannya: semua anak kloningannya di layar akan langsung berubah mengikuti induknya!"
       ],
-      tip: "Grup Boolean tidak merusak! Kamu bisa klik dua kali kapan saja untuk memindahkan bentuk aslinya.",
-      videoUrl: "https://www.youtube.com/embed/AmDKFOXD_Jg",
-      externalLink: "https://www.youtube.com/watch?v=AmDKFOXD_Jg"
+      tip: "Komponen utama (induk) adalah sumber kebenaran (Source of Truth). Jika kamu mengedit warna atau padding induknya, semua turunan (instance) di seluruh halaman desainmu akan ikut berubah secara otomatis!",
+      videoUrl: "https://www.youtube.com/embed/k74IheEW-lI",
+      externalLink: "https://www.youtube.com/watch?v=k74IheEW-lI"
     },
     {
       day: 5, level: "beginner", levelLabel: "Pemula 🐣",
-      title: "Hari 5: Auto Layout Kompleks & Posisi Absolut",
-      time: "25 mnt",
-      concepts: ["#SpaceBetween", "#AbsolutePosition", "#ZIndex", "#Navbar"],
-      objective: "Bangun header navigasi responsif dengan logo terpusat dan lencana pemberitahuan menggunakan pemosisian absolut.",
-      dim: "Bar lebar 100%", radius: "0px", color: "#FFFFFF",
-      steps: [
-        "1. Buat frame Navbar (375x64px). Tambahkan Auto Layout, atur distribusi ke 'Space Between'.",
-        "2. Letakkan ikon hamburger di kiri, avatar profil di kanan.",
-        "3. Tambahkan teks logo di tengah, pilih, lalu klik 'Absolute Position' di kanan atas.",
-        "4. Buat lingkaran merah 16x16px untuk lencana notifikasi. Seret ke dalam frame avatar, atur ke Absolute Position.",
-        "5. Sematkan lencana ke kendala Top dan Right dari avatar."
-      ],
-      tip: "Absolute Position di dalam Auto Layout membuat elemen melayang bebas tanpa mengganggu tata letak flex.",
-      videoUrl: "https://www.youtube.com/embed/jQ1sfKIl50E",
-      externalLink: "https://www.youtube.com/watch?v=jQ1sfKIl50E"
-    },
-    {
-      day: 6, level: "beginner", levelLabel: "Pemula 🐣",
-      title: "Hari 6: Token & Gaya Desain Dasar",
+      title: "Hari 5: Varian & Status Tombol (Variants)",
       time: "20 mnt",
-      concepts: ["#ColorStyles", "#DesignTokens", "#TypographyStyles", "#Efficiency"],
-      objective: "Tetapkan fondasi yang terukur dengan mendefinisikan gaya Warna dan Tipografi yang dapat digunakan kembali di banyak komponen.",
-      dim: "Gaya Global", radius: "T/A", color: "Palet Merek",
+      concepts: ["#Variants", "#ComponentProperties", "#States"],
+      objective: "Perluas arsitektur komponenmu dengan menambahkan varian untuk status hover, aktif, dan nonaktif.",
+      dim: "Menyesuaikan otomatis", radius: "999px", color: "Tema Ganda",
       steps: [
-        "1. Buat 4 contoh warna: Utama (#FFB7C5), Sekunder (#D8B4FE), Latar (#F8F9FA), Teks (#1F2937).",
-        "2. Pilih contoh Utama, klik ikon 4-titik di panel Fill, klik '+', beri nama 'Color/Primary'.",
-        "3. Pilih layer teks, klik ikon 4-titik di panel Text, simpan sebagai 'Typography/Heading 1'.",
-        "4. Buat 3 kartu UI berbeda dan terapkan gaya tersebut ke semuanya.",
-        "5. Edit gaya 'Color/Primary' dari sidebar kanan dan lihat semua kartu berubah sekaligus!"
+        "1. Siapkan Induk: Pilih Komponen Induk tombol ungu (empat wajik) yang kamu buat di Hari 4.",
+        "2. Tambah Varian: Lihat di menu Properties panel sebelah kanan. Klik tanda plus (+) di samping menu 'Properties' lalu pilih 'Variant'. Figma otomatis membuatkan kotak putus-putus ungu yang menampung tombolmu.",
+        "3. Beri Nama Properti: Di panel Kanan (seksi Current Variant), ubah nama Property 1 menjadi 'State' (Kondisi), dan nilainya menjadi 'Default'.",
+        "4. Gandakan Varian: Di dalam kotak putus-putus ungu itu, klik tombolmu, lalu klik ikon (+) kecil di pojok bawahnya untuk membuat salinan varian baru. Beri nilai 'Hover' pada properti State-nya.",
+        "5. Kustomisasi Visual State Hover: Pada tombol berstatus Hover tersebut, ubah warna Fill-nya menjadi sedikit lebih gelap atau lebih terang. Coba juga tambahkan sedikit Drop Shadow. Sekarang kamu punya tombol responsif yang utuh!"
       ],
-      tip: "Gunakan konvensi '/' (misal 'Color/Brand/Primary') untuk mengatur gaya ke dalam folder otomatis.",
-      videoUrl: "https://www.youtube.com/embed/bI6q16ffdgQ",
-      externalLink: "https://www.youtube.com/watch?v=bI6q16ffdgQ"
-    },
+      tip: "Gunakan nama properti Boolean yang cerdas! Jika kamu menamai nilai varianmu dengan kata 'True' atau 'False' (misalnya properti 'Has Icon?'), Figma akan otomatis merubahnya menjadi tombol Switch (On/Off) di panel desain!",
+      videoUrl: "https://www.youtube.com/embed/rIeP3oF6w-w",
+      externalLink: "https://www.youtube.com/watch?v=rIeP3oF6w-w"
+    }  ,
     {
-      day: 7, level: "beginner", levelLabel: "Pemula 🐣",
-      title: "Hari 7: Komponen Induk & Instance",
-      time: "25 mnt",
-      concepts: ["#MasterComponent", "#Instances", "#Overrides", "#ResetAll"],
-      objective: "Buat Komponen Induk yang kuat, buat beberapa instance, dan pelajari cara mengelola serta mereset override properti.",
-      dim: "Kartu 300x400px", radius: "20px", color: "Ungu Komponen",
-      steps: [
-        "1. Bangun Kartu Profil: avatar, nama, bio, dan tombol 'Ikuti'.",
-        "2. Pilih frame induk, tekan Ctrl+Alt+K untuk menjadikannya Komponen Induk (garis ungu).",
-        "3. Tahan Alt lalu seret untuk membuat 3 Instance turunan.",
-        "4. Di instance, ganti teks, ubah avatar, dan ubah warna tombol satu menjadi abu-abu.",
-        "5. Pilih tombol abu-abu dan klik 'Reset all overrides' untuk mengembalikan ke gaya Induk.",
-        "6. Ubah corner radius Komponen Induk — lihat semua instance ikut berubah strukturalnya!"
-      ],
-      tip: "Jangan gunakan Komponen Induk langsung di desain layar. Simpan di halaman 'Components' dan hanya gunakan Instance.",
-      videoUrl: "https://www.youtube.com/embed/d88nvmnj5mU",
-      externalLink: "https://www.youtube.com/watch?v=d88nvmnj5mU"
-    },
-    {
-      day: 8, level: "beginner", levelLabel: "Pemula 🐣",
-      title: "Hari 8: Prototyping: Dasar Smart Animate",
-      time: "25 mnt",
-      concepts: ["#SmartAnimate", "#LayerNaming", "#EasingCurves", "#Transitions"],
-      objective: "Rancang transisi layar yang mulus menggunakan Smart Animate dan penamaan layer yang konsisten.",
-      dim: "Transisi Layar", radius: "T/A", color: "Biru Interaksi",
-      steps: [
-        "1. Buat 'Layar A' dengan thumbnail kecil di kiri dan judul pendek.",
-        "2. Gandakan 'Layar A' menjadi 'Layar B'.",
-        "3. Di Layar B, perbesar thumbnail ke lebar penuh. KRITIS: Nama layer harus identik di kedua layar!",
-        "4. Beralih ke tab Prototype (Shift + E). Tarik noodle dari thumbnail Layar A ke Layar B.",
-        "5. Atur: Trigger = On Click, Action = Navigate To, Animation = Smart Animate.",
-        "6. Atur Easing ke 'Ease Out' durasi 400ms. Tekan Shift + Space untuk preview!"
-      ],
-      tip: "Smart Animate bergantung pada nama layer yang sama persis. Jika berbeda, akan fade bukan morph.",
-      videoUrl: "https://www.youtube.com/embed/RSqdlMgjYE4",
-      externalLink: "https://www.youtube.com/watch?v=RSqdlMgjYE4"
-    },
-    {
-      day: 9, level: "beginner", levelLabel: "Pemula 🐣",
-      title: "Hari 9: Kliping, Masking, & Manipulasi Gambar",
+      day: 6, level: "intermediate", levelLabel: "Menengah 🔥",
+      title: "Hari 6: Masking Bentuk Lanjutan",
       time: "20 mnt",
-      concepts: ["#ClipContent", "#LayerMasks", "#ImageFills", "#Cropping"],
-      objective: "Kuasai teknik pemotongan gambar non-destruktif menggunakan kliping Frame dan Vector Masks kustom.",
-      dim: "Berbagai Bentuk", radius: "Kompleks", color: "Data Gambar",
+      concepts: ["#Masking", "#BooleanGroups", "#ImageCropping"],
+      objective: "Buat profil atau header rumit dengan memotong gambar di dalam perpotongan berbagai bentuk geometris kompleks.",
+      dim: "Menyesuaikan", radius: "Kustom", color: "Bervariasi",
       steps: [
-        "1. Teknik 1 (Clip Content): Buat Frame 300x300px, letakkan gambar melebihi batas, centang 'Clip Content'.",
-        "2. Teknik 2 (Masking): Gambar bentuk kustom dengan Pen, letakkan gambar di atas bentuk tersebut.",
-        "3. Pilih bentuk, klik kanan, pilih 'Use as Mask' (Ctrl+Alt+M).",
-        "4. Teknik 3 (Image Fill): Gambar lingkaran, ubah Fill ke 'Image', unggah foto, gunakan mode 'Crop'.",
-        "5. Kombinasikan teknik ini untuk membuat kolase foto profil yang bertumpuk."
+        "1. Buat Bentuk Masker: Gambar sebuah bentuk geometris (misal lingkaran dengan tekan 'O' atau poligon). Ini akan menjadi 'cetakan' untuk gambarmu.",
+        "2. Letakkan Gambar: Tempelkan (Ctrl+V) foto atau gambar resolusi tinggi tepat di atas bentuk yang baru saja kamu buat (di panel Layers, pastikan layer foto ada di atas layer bentuk).",
+        "3. Terapkan Masking: Pilih kedua layer tersebut di panel kiri. Lihat ke menu bar tengah atas, lalu klik ikon bulan sabit bersusun (Use as Mask), atau tekan Ctrl+Alt+M (Win) / Ctrl+Cmd+M (Mac).",
+        "4. Edit Masker Kapan Saja: Jika kamu mengklik gambar di dalam grup masker, kamu bebas menggeser, memutar, atau membesarkan gambar tersebut (Scale) tanpa mengubah bentuk luar cetakan maskernya."
       ],
-      tip: "Metode 'Image Fill' adalah pendekatan terbersih untuk avatar dan thumbnail geometris standar.",
-      videoUrl: "https://www.youtube.com/embed/6lSvKk7lTl0",
-      externalLink: "https://www.youtube.com/watch?v=6lSvKk7lTl0"
+      tip: "Masking di Figma bekerja dari bawah ke atas. Layer paling BAWAH yang kamu pilih akan bertindak sebagai bentuk stensil untuk semua layer di atasnya!",
+      videoUrl: "https://www.youtube.com/embed/n3H5aL7vNlE",
+      externalLink: "https://www.youtube.com/watch?v=n3H5aL7vNlE"
     },
     {
-      day: 10, level: "beginner", levelLabel: "Pemula 🐣",
-      title: "Hari 10: Blend Modes & Gradien Atmosferik",
-      time: "25 mnt",
-      concepts: ["#BlendModes", "#LinearGradient", "#RadialGradient", "#Multiply"],
-      objective: "Buat latar belakang UI kaya dan atmosferik dengan menggabungkan gradien kompleks dan blend mode fotografis.",
-      dim: "Layar Penuh", radius: "0px", color: "Multiply / Overlay",
-      steps: [
-        "1. Buat frame 1440x900px, atur isian dasar ke biru laut gelap (#0B0F19).",
-        "2. Tambahkan Radial Gradient besar dari kanan atas (Cyan ke 0% opasitas), lalu dari kiri bawah (Magenta).",
-        "3. Impor tekstur noise halus. Letakkan di atas gradien.",
-        "4. Di panel Layer, ubah Blend Mode gambar dari 'Pass Through' ke 'Overlay' atau 'Multiply'.",
-        "5. Atur opasitas tekstur ke 15% untuk efek premium bertekstur butiran.",
-        "6. Letakkan tipografi putih di atas untuk memverifikasi kontras."
-      ],
-      tip: "'Multiply' menggelapkan, 'Screen' mencerahkan, dan 'Overlay' meningkatkan kontras.",
-      videoUrl: "https://www.youtube.com/embed/1pW_sk-2y40",
-      externalLink: "https://www.youtube.com/watch?v=1pW_sk-2y40"
-    },
-    {
-      day: 11, level: "intermediate", levelLabel: "Menengah 🌿",
-      title: "Hari 11: Komponen Interaktif & Status Hover",
-      time: "30 mnt",
-      concepts: ["#ComponentVariants", "#HoverState", "#PressedState", "#Microinteractions"],
-      objective: "Bangun Komponen Tombol mandiri yang menangani status Hover dan Pressed sendiri tanpa banyak layar.",
-      dim: "Set Varian", radius: "12px", color: "Interaktif",
-      steps: [
-        "1. Desain tombol utama. Ubah menjadi Komponen (Ctrl+Alt+K).",
-        "2. Di panel Properti, klik '+' dan tambahkan properti 'Variant'. Klik '+' ungu di kanvas.",
-        "3. Beri nama varian pertama 'State=Default' dan kedua 'State=Hover'. Gelapkan isian Hover.",
-        "4. Tambahkan varian 'State=Pressed'. Skalakan ke bawah 5% dan gelapkan lebih lanjut.",
-        "5. Di mode Prototype, hubungkan Default ke Hover: Trigger 'While Hovering', Smart Animate 200ms.",
-        "6. Hubungkan Hover ke Pressed dengan Trigger 'While Pressing'. Preview hasilnya!"
-      ],
-      tip: "Komponen Interaktif mengurangi jumlah frame dalam prototype secara drastis — file lebih ringan dan cepat.",
-      videoUrl: "https://www.youtube.com/embed/guYN5LaAcS8",
-      externalLink: "https://www.youtube.com/watch?v=guYN5LaAcS8"
-    },
-    {
-      day: 12, level: "intermediate", levelLabel: "Menengah 🌿",
-      title: "Hari 12: Auto Layout Wrap & Grid Responsif",
-      time: "25 mnt",
-      concepts: ["#AutoLayoutWrap", "#MinMaxWidth", "#TagCloud", "#FluidDesign"],
-      objective: "Bangun awan tag yang mengalir dan grid produk responsif yang otomatis membungkus ke baris baru.",
-      dim: "Lebar Dinamis", radius: "Bervariasi", color: "Multi-chip",
-      steps: [
-        "1. Buat 8 komponen Tag berbeda menggunakan Auto Layout.",
-        "2. Pilih semua tag, tekan Shift + A untuk membungkus dalam frame Auto Layout induk.",
-        "3. Di panel Auto Layout, ubah arah ke 'Wrap' (ikon panah melengkung).",
-        "4. Atur lebar frame ke 'Fixed' dan ubah ukurannya — tag membungkus ke baris baru secara otomatis.",
-        "5. Terapkan Min Width dan Max Width untuk mencegah kontainer terlalu sempit atau lebar."
-      ],
-      tip: "Auto Layout Wrap adalah CSS Flexbox-nya Figma — esensial untuk desain web yang responsif.",
-      videoUrl: "https://www.youtube.com/embed/c7uycdu7CsY",
-      externalLink: "https://www.youtube.com/watch?v=c7uycdu7CsY"
-    },
-    {
-      day: 13, level: "intermediate", levelLabel: "Menengah 🌿",
-      title: "Hari 13: Properti Komponen Lanjutan (UI3)",
-      time: "35 mnt",
-      concepts: ["#BooleanProps", "#TextProps", "#InstanceSwap", "#SidebarControl"],
-      objective: "Ekspos properti Boolean, Teks, dan Instance Swap sehingga komponen bisa dikustomisasi penuh dari sidebar kanan.",
-      dim: "Mesin Komponen", radius: "16px", color: "Sistem Default",
-      steps: [
-        "1. Buat komponen 'List Item': ikon kiri, judul, subjudul, dan chevron kanan.",
-        "2. Pilih ikon kiri. Di panel Layer, klik 'Create boolean property'. Beri nama 'Show Icon'.",
-        "3. Pilih teks judul. Di panel Text, klik 'Create text property'. Beri nama 'Title Text'.",
-        "4. Pilih chevron kanan. Di bagian Instance, klik 'Create instance swap property'. Beri nama 'Right Icon'.",
-        "5. Letakkan instance di kanvas — kamu bisa kontrol segalanya dari sidebar tanpa klik ke dalam layer!"
-      ],
-      tip: "Properti komponen menghilangkan kebutuhan ratusan varian hanya untuk perubahan sederhana seperti sembunyikan ikon.",
-      videoUrl: "https://www.youtube.com/embed/cRE1hUHauIc",
-      externalLink: "https://www.youtube.com/watch?v=cRE1hUHauIc"
-    },
-    {
-      day: 14, level: "intermediate", levelLabel: "Menengah 🌿",
-      title: "Hari 14: Scroll & Elemen Tetap (Fixed)",
+      day: 7, level: "intermediate", levelLabel: "Menengah 🔥",
+      title: "Hari 7: Prototyping Dasar (Klik & Hover)",
       time: "20 mnt",
-      concepts: ["#ScrollOverflow", "#FixedPosition", "#StickyHeader", "#Prototyping"],
-      objective: "Desain layar seluler realistis dengan konten yang bisa digulir dan header/tab bar yang tetap di posisi.",
-      dim: "393x852 (iPhone 15)", radius: "40px", color: "Latar Belakang Aplikasi",
+      concepts: ["#Prototyping", "#Interactions", "#SmartAnimate"],
+      objective: "Hubungkan dua frame dan perkenalkan animasi interaktif agar desainmu terasa seperti aplikasi nyata.",
+      dim: "Frame iPhone 14", radius: "0px", color: "#FFFFFF",
       steps: [
-        "1. Buat frame iPhone 15. Letakkan Header di atas dan Tab Bar di bawah.",
-        "2. Pilih Header, di mode Prototype ubah Position ke 'Fixed (stay in place)'. Ulangi untuk Tab Bar.",
-        "3. Buat kolom Auto Layout konten panjang yang melampaui batas bawah frame.",
-        "4. Pilih frame iPhone utama, atur 'Overflow behavior' ke 'Vertical'.",
-        "5. Presentasikan prototype (Shift + Space) dan gulir — header tetap, konten mengalir!"
+        "1. Siapkan Dua Layar: Buat dua Frame ukuran HP yang berbeda. Letakkan tombol (seperti tombol Hari 1) di layar pertama.",
+        "2. Masuk Mode Prototype: Pindah ke mode Prototype dengan mengklik tab 'Prototype' di bagian paling kanan atas layar Figma.",
+        "3. Menarik Kabel Koneksi: Klik tombolmu di layar pertama. Kamu akan melihat bulatan biru (+). Tarik bulatan biru itu ke arah Frame layar kedua.",
+        "4. Atur Detail Animasi: Setelah dilepas, menu Interaction Details akan muncul. Pada baris pertama pilih 'On click'. Pada bagian Animation, ubah 'Instant' menjadi 'Smart Animate'. Atur kurva menjadi 'Ease Out' 300ms.",
+        "5. Mainkan Simulasi: Tekan tombol 'Play' (segitiga ▶️) di ujung kanan atas layar Figma (Present) untuk mencoba langsung desain aplikasi interaktifmu!"
       ],
-      tip: "Pastikan layer konten yang digulir berada di BAWAH header/footer tetap di panel layer kiri.",
-      videoUrl: "https://www.youtube.com/embed/RRWVmxD9ftE",
-      externalLink: "https://www.youtube.com/watch?v=RRWVmxD9ftE"
+      tip: "Kunci keberhasilan Smart Animate adalah NAMA LAYER. Pastikan nama layer dari elemen yang ingin kamu animasikan persis sama persis (huruf besar/kecilnya) di layar 1 dan layar 2!",
+      videoUrl: "https://www.youtube.com/embed/RkM44oE1eYI",
+      externalLink: "https://www.youtube.com/watch?v=RkM44oE1eYI"
     },
     {
-      day: 15, level: "intermediate", levelLabel: "Menengah 🌿",
-      title: "Hari 15: Fisika Pegas Kustom dalam Prototype",
+      day: 8, level: "intermediate", levelLabel: "Menengah 🔥",
+      title: "Hari 8: Komponen Navigasi Bawah Tab Bar",
       time: "25 mnt",
-      concepts: ["#SpringPhysics", "#BouncyUI", "#CustomEasing", "#MicroInteraction"],
-      objective: "Ganti transisi linier dengan fisika pegas kustom untuk animasi yang organik dan terasa alami seperti aplikasi nyata.",
-      dim: "Toggle Switch", radius: "999px", color: "#34C759",
+      concepts: ["#TabBar", "#AutoLayout", "#Constraints"],
+      objective: "Desain bilah navigasi bawah ponsel standar industri menggunakan varian dan properti instance untuk menukar ikon.",
+      dim: "390px x 80px", radius: "0px", color: "Tebal Cerah",
       steps: [
-        "1. Buat Toggle Switch gaya iOS dengan varian Off (abu-abu, kiri) dan On (hijau, kanan).",
-        "2. Hubungkan di mode Prototype: On Click → Change To.",
-        "3. Di Animation, pilih 'Smart Animate'. Ubah Easing ke 'Custom Spring'.",
-        "4. Atur parameter: Mass = 1, Stiffness = 300, Damping = 15.",
-        "5. Uji prototype — tombol harus melesat dan memantul organik sebelum berhenti.",
-        "6. Turunkan Damping ke 8 untuk efek pantulan karet yang berlebihan."
+        "1. Susun Ikon & Label: Cari 4-5 set ikon. Ketikkan nama tab (Home, Search, dsb) di bawah setiap ikon. Ubah tiap set ikon+teks menjadi vertikal Auto Layout (Shift + A), beri nama 'Tab Item'.",
+        "2. Susun Bilah Tab: Pilih semua 4 'Tab Item' yang sudah kamu buat. Tekan Shift+A lagi untuk membuat baris utuh. Atur jarak antar tab (Gap) secara otomatis (Horizontal gap = Auto).",
+        "3. Ukuran & Constraint Fleksibel: Atur lebar grup bilah tab menjadi 390px (lebar layar umum ponsel). Pastikan properti Horizontal Resizing di-set ke 'Fill container' agar merenggang proporsional.",
+        "4. Komponen Induk Navigasi: Ubah bilah tab ini menjadi Komponen Utama (Ctrl+Alt+K) agar kamu bisa meletakkannya di semua Frame layar aplikasi secara instan.",
+        "5. Kunci ke Bawah: Tempatkan navigasi ke Frame layarmu (di bagian paling bawah). Di panel kanan, set Constraints-nya ke 'Left & Right' (Horizontal) dan 'Bottom' (Vertikal). Jika tinggi Frame diubah, tab bar akan selalu diam di bawah!"
       ],
-      tip: "Animasi pegas terasa jauh lebih alami dari ease biasa. Apple iOS menggunakan fisika pegas hampir di mana-mana.",
-      videoUrl: "https://www.youtube.com/embed/9sgs4nL0rFo",
-      externalLink: "https://www.youtube.com/watch?v=9sgs4nL0rFo"
+      tip: "Untuk menjaga menu agar melayang saat di-scroll di simulasi prototype, ceklis kotak 'Fix position when scrolling' di menu Prototype panel kanan!",
+      videoUrl: "https://www.youtube.com/embed/w7m_0F-fKzE",
+      externalLink: "https://www.youtube.com/watch?v=w7m_0F-fKzE"
     },
     {
-      day: 16, level: "intermediate", levelLabel: "Menengah 🌿",
-      title: "Hari 16: Masking Lanjutan & Seni Blend Mode",
-      time: "30 mnt",
-      concepts: ["#MeshGradient", "#LayerBlur", "#OrganicGlow", "#Masking"],
-      objective: "Kombinasikan masking tingkat lanjut, layer blur ekstrem, dan blend mode untuk membuat latar belakang mesh gradient dinamis.",
-      dim: "Kanvas 1440x900", radius: "0px", color: "Warna Mesh",
+      day: 9, level: "intermediate", levelLabel: "Menengah 🔥",
+      title: "Hari 9: Pengantar Variables (Design Tokens)",
+      time: "20 mnt",
+      concepts: ["#Variables", "#ColorTokens", "#DesignSystem"],
+      objective: "Beralih dari pemilih warna statis ke Variabel Figma tingkat lanjut, meletakkan dasar untuk dukungan mode gelap nanti.",
+      dim: "Panel Variabel", radius: "-", color: "Sistem Warna",
       steps: [
-        "1. Buat frame besar dengan latar belakang ungu pekat.",
-        "2. Gambar 3 blob besar berbentuk amuba dalam warna Cyan, Magenta, dan Kuning.",
-        "3. Terapkan 'Layer Blur' besar-besaran (200-300px) sampai menjadi awan warna lembut.",
-        "4. Kelompokkan blob. Buat bentuk vektor tajam, letakkan di bawah grup.",
-        "5. Pilih bentuk tajam, klik kanan, 'Use as Mask' — awan gradien terkandung dalam bentuk.",
-        "6. Animasikan blob berputar di dalam mask menggunakan Smart Animate."
+        "1. Buka Menu Variabel Lokal: Jangan pilih layer apa pun. Klik latar kanvas kosong. Di panel kanan (Design), klik ikon (Local Variables) yang terlihat seperti tabel.",
+        "2. Buat Koleksi Warna Baru: Klik 'Create variable', lalu pilih 'Color'. Beri nama cerdas seperti 'Brand/Primary' dan isi kodenya dengan hex #FF6B81.",
+        "3. Sistematisasi Skema Mode Terang: Buat variabel untuk warna lain: Surface (Putih), Text-Primary (Abu Gelap), Text-Secondary (Abu Muda), dan Border (Abu Samar).",
+        "4. Terapkan Variabel ke Desain: Kembali ke bentuk kartu atau teksmu. Jangan asal klik hex warna! Klik ikon segi empat bertitik-titik (Style/Variable picker) di dekat kode warna, lalu pilih variabel 'Brand/Primary' yang tadi kamu buat.",
+        "5. Kekuatan Global: Ubah nilai 'Brand/Primary' di menu Local Variables menjadi Biru. Semua elemen (teks, ikon, kotak) di seluruh proyek yang menggunakan variabel ini akan serentak berubah warna!"
       ],
-      tip: "Layer blur ekstrem berat di CPU. Jika Figma lambat, group lalu 'Rasterize Selection'.",
-      videoUrl: "https://www.youtube.com/embed/JA50t6wTYZ0",
-      externalLink: "https://www.youtube.com/watch?v=JA50t6wTYZ0"
+      tip: "Pemisahan sangat penting. Alih-alih menamai variabel 'Red-500', namailah dengan fungsi tujuannya seperti 'Button-Background-Danger'. Ini membuat peralihan warna tema sangat mudah dipahami!",
+      videoUrl: "https://www.youtube.com/embed/t0D4W2Q-Otc",
+      externalLink: "https://www.youtube.com/watch?v=t0D4W2Q-Otc"
     },
     {
-      day: 17, level: "intermediate", levelLabel: "Menengah 🌿",
-      title: "Hari 17: Auto Layout Bersarang untuk Dashboard",
-      time: "35 mnt",
-      concepts: ["#NestedAutoLayout", "#FillContainer", "#Flexbox", "#Dashboard"],
-      objective: "Rancang tata letak dashboard kompleks dan responsif dengan menyarangkan banyak frame Auto Layout horizontal dan vertikal.",
-      dim: "Aplikasi Desktop", radius: "8px", color: "Skala Netral",
+      day: 10, level: "intermediate", levelLabel: "Menengah 🔥",
+      title: "Hari 10: Auto Layout Absolute Positioning",
+      time: "20 mnt",
+      concepts: ["#AbsolutePosition", "#Badges", "#Overlays"],
+      objective: "Kuasai seni menempatkan elemen secara absolut (seperti lencana pemberitahuan merah) dengan sempurna di dalam bingkai Auto Layout yang ketat.",
+      dim: "Ikon Notifikasi", radius: "100px", color: "#FF0000",
       steps: [
-        "1. Buat frame Desktop. Tambahkan Auto Layout (Horizontal). Ini kontainer induk.",
-        "2. Tambahkan Sidebar (Lebar Tetap 240px, Fill Height). Tambahkan area Konten Utama (Fill Width, Fill Height).",
-        "3. Di dalam Konten Utama, tambahkan Topbar (Fill Width, Tinggi Tetap 64px) dan Grid Dasbor (Fill Width, Fill Height).",
-        "4. Di Grid Dasbor, gunakan Auto Layout 'Wrap' untuk menempatkan beberapa kartu data.",
-        "5. Atur semua kartu data ke 'Fill Container' horizontal dengan Min Width 300px.",
-        "6. Ubah ukuran frame Desktop — lihat seluruh arsitektur beradaptasi secara sempurna!"
+        "1. Persiapan Ikon Dasar: Buat ikon lonceng sederhana. Bungkus ikon tersebut dengan Auto Layout (Shift + A). Tambahkan warna isi atau padding jika perlu.",
+        "2. Buat Lencana Notifikasi: Gambar lingkaran merah berukuran 12x12px dengan angka di tengahnya, jadikan satu frame Auto Layout berukuran kecil.",
+        "3. Tempel Lencana ke Lonceng: Seret lencana merah tadi masuk ke dalam grup Auto Layout lonceng. Lencana awalnya akan tersusun kaku bersebelahan dengan lonceng (tidak tumpang tindih).",
+        "4. Ubah ke Posisi Bebas (Absolute): Pilih lencana merah saja, lalu di panel Kanan bagian Auto Layout frame atas, klik ikon yang terlihat seperti kursor '+' (Absolute position) di sudut kanan.",
+        "5. Sesuaikan Penempatan Tumpang Tindih: Sekarang lencana merah terbebas dari aturan susunan Auto Layout! Geser letaknya menggunakan Constraints (misal ke Pojok Kanan Atas) agar lencana pas melayang di ujung lonceng."
       ],
-      tip: "Aturan emas: Sarangkan Auto Layout, dan terapkan 'Fill Container' pada elemen bagian dalam secara konsisten.",
-      videoUrl: "https://www.youtube.com/embed/WxSYc5afjDY",
-      externalLink: "https://www.youtube.com/watch?v=WxSYc5afjDY"
+      tip: "Absolute Positioning di Auto Layout adalah trik sakti untuk meletakkan titik notifikasi, tombol 'X' keluar yang melayang, atau dekorasi tumpang-tindih tanpa merusak tatanan layout otomatis yang rapi!",
+      videoUrl: "https://www.youtube.com/embed/bN5bJ-K-t9A",
+      externalLink: "https://www.youtube.com/watch?v=bN5bJ-K-t9A"
+    }  ,
+    {
+      day: 11, level: "intermediate", levelLabel: "Menengah 🔥",
+      title: "Hari 11: Sistem Grid Layout Lanjutan",
+      time: "20 mnt",
+      concepts: ["#LayoutGrid", "#ResponsiveDesign", "#Columns"],
+      objective: "Siapkan kerangka susunan kolom yang fleksibel dan profesional agar desain UI-mu selaras di berbagai ukuran layar ponsel atau web.",
+      dim: "Grid Utama", radius: "-", color: "Merah Lembut",
+      steps: [
+        "1. Pilih Bingkai Utama: Klik pada Frame utama layarmu (contoh: frame 'iPhone 14'). Pastikan kamu memilih frame luar, bukan elemen di dalamnya.",
+        "2. Aktifkan Layout Grid: Di panel Kanan (Design), temukan bagian 'Layout grid', lalu klik tanda tambah (+).",
+        "3. Konfigurasi Mode Kolom: Secara default, grid berupa kotak-kotak piksel 8x8. Klik ikon menu grid 9-kotak di sebelah kiri tulisannya, lalu ubah opsi 'Grid' menjadi 'Columns'.",
+        "4. Atur Parameter Kolom (Mobile): Untuk desain ponsel, isi angka Count = 4. Margin = 16px (memberi jarak bernapas di tepi kiri/kanan layar), dan Gutter = 16px (jarak antar kolom).",
+        "5. Sesuaikan Elemen dengan Grid: Tarik kotak-kotak komponen desainmu. Saat mendekati pinggir kolom grid merah yang tembus pandang itu, bentukmu akan menempel secara otomatis (snap) ke garis tersebut. Desainmu kini selaras sempurna!"
+      ],
+      tip: "Shortcut penting: Tekan Shift + G untuk memunculkan atau menyembunyikan grid tata letak transparan merah di layarmu seketika saat sedang mendesain!",
+      videoUrl: "https://www.youtube.com/embed/P6W_bE4xK_8",
+      externalLink: "https://www.youtube.com/watch?v=P6W_bE4xK_8"
     },
     {
-      day: 18, level: "intermediate", levelLabel: "Menengah 🌿",
-      title: "Hari 18: Korsel Horizontal (Carousel)",
+      day: 12, level: "intermediate", levelLabel: "Menengah 🔥",
+      title: "Hari 12: Micro-Interactions Lottie & GIF",
+      time: "15 mnt",
+      concepts: ["#Lottie", "#GIFs", "#MicroInteractions"],
+      objective: "Impor animasi Lottie atau GIF yang sudah jadi untuk menambahkan efek kilauan instan (seperti animasi detak jantung saat tombol ditekan).",
+      dim: "Ikon Animasi", radius: "-", color: "-",
+      steps: [
+        "1. Cari File Animasi Lottie/GIF: Buka plugin 'LottieFiles' di Figma (Klik kanan area kosong -> Plugins -> LottieFiles) atau temukan GIF transparan.",
+        "2. Buat Pengganti Tempat (Placeholder): Gambar frame persegi (tekan 'F') tepat di atas area tempat animasi harus muncul (contoh: di atas tombol 'Suka').",
+        "3. Masukkan Media Animasi: Pada panel kanan, ubah mode 'Fill' kotak tadi dari bentuk kotak warna Solid menjadi pilihan drop-down 'Video' atau 'Image' (jika GIF). Unggah dan masukkan aset videomu.",
+        "4. Mode Pemotongan: Pastikan pengaturan potong gambar (Fill Settings) diatur ke 'Fit' atau 'Fill' agar animasi tidak terpotong aneh dalam kotaknya.",
+        "5. Uji Prototipe Interaktif: Masuk mode Prototype, hubungkan tombol ke overlay yang memunculkan GIF ini. Klik 'Play' (segitiga di atas kanan). Lihat animasimu bermain otomatis saat interaksi diklik!"
+      ],
+      tip: "GIF sangat bagus untuk efek animasi kecil yang terus berulang (seperti partikel atau loading), tetapi gunakan MP4 jika kamu butuh efek yang beresolusi tinggi di area layar yang besar demi performa yang mulus.",
+      videoUrl: "https://www.youtube.com/embed/5-9_T1xQ15k",
+      externalLink: "https://www.youtube.com/watch?v=5-9_T1xQ15k"
+    },
+    {
+      day: 13, level: "advanced", levelLabel: "Pro 🏆",
+      title: "Hari 13: Kustomisasi Shadow (Neumorphism)",
+      time: "20 mnt",
+      concepts: ["#Neumorphism", "#ShadowPlay", "#Depth"],
+      objective: "Buat elemen lembut menonjol seperti efek 3D plastik cetakan dengan menggabungkan dua arah drop shadow (bayangan jatuh).",
+      dim: "200px x 200px", radius: "50px", color: "Abu Terang (#E0E5EC)",
+      steps: [
+        "1. Buat Bentuk & Samakan Warna Dasar: Gambar kotak 200x200px, beri lengkungan 50px. Jadikan warna Fill bingkai latar layar (Background Frame) sama persis dengan warna bentuk kotaknya, misal abu terang (#E0E5EC).",
+        "2. Bayangan Sudut Gelap (Kanan Bawah): Pada bentuk, klik (+) pada 'Effects' -> 'Drop Shadow'. Atur sumbu X: 8, Y: 8, Blur: 16. Pilih warna Hitam (#000000) dan setel Opacity ke angka kecil (sekitar 15%).",
+        "3. Bayangan Cahaya (Kiri Atas): Klik (+) lagi pada 'Effects' untuk Drop Shadow ke-2. Atur arah bayangannya kebalikannya: X: -8, Y: -8, Blur: 16. Kali ini pilih warnanya menjadi Putih Murni (#FFFFFF) dan Opacity naikkan agak terang (70%).",
+        "4. Keseimbangan (Tweaking): Bermainlah dengan nilai persentase Opacity dari kedua bayangan itu hingga mendapatkan tekstur seolah-olah tombol membulat itu dipahat dari dasar layar abu-abu."
+      ],
+      tip: "Trik desain neumorphism hanya bisa bekerja dengan baik jika bentuk dan layarnya tidak berwarna hitam murni atau putih murni, harus abu-abu, pastel pudar, atau warna dengan intensitas tengah!",
+      videoUrl: "https://www.youtube.com/embed/j_8o20O-rB0",
+      externalLink: "https://www.youtube.com/watch?v=j_8o20O-rB0"
+    },
+    {
+      day: 14, level: "advanced", levelLabel: "Pro 🏆",
+      title: "Hari 14: Scrolling Horisontal (Carousel)",
+      time: "20 mnt",
+      concepts: ["#Prototyping", "#OverflowScroll", "#Carousel"],
+      objective: "Bangun korsel gulir interaktif ke samping (horizontal) untuk gambar atau kartu produk di dalam layar aplikasi ponsel.",
+      dim: "Lebar Area Konten", radius: "0px", color: "Campuran",
+      steps: [
+        "1. Siapkan Deretan Kartu: Buat 3 atau 4 kartu desain (seperti resep makanan atau produk belanja).",
+        "2. Kunci dalam Frame Mendatar (Row): Pilih semua kartu tersebut, tekan Shift + A. Di opsi Auto Layout kanan, pastikan panahnya menunjuk arah Horizontal (Kanan), bukan Vertikal (Bawah).",
+        "3. Potong Lebar Frame: Klik grup frame baris kartu itu. Tarik pinggiran kanannya untuk memperpendek/memotong kotaknya sehingga hanya seukuran lebar layar ponsel (teks 'Clip content' di panel kanan harus diaktifkan agar kartu di luar batas menghilang).",
+        "4. Jadikan Bisa Digulir: Pindah ke tab 'Prototype' (atas kanan). Di bagian 'Scroll behavior', temukan menu drop-down 'Overflow' dan ganti pengaturannya menjadi 'Horizontal'.",
+        "5. Tes Sentuh: Klik 'Present' (tombol Segitiga Atas Kanan). Sekarang cobalah menarik kartumu dengan mouse/jari dari kiri ke kanan. Voila! Efek korsel halus berhasil dibuat."
+      ],
+      tip: "Jangan lupa untuk menyisakan bantalan/jarak (padding) sedikit di area 'Clip content', sehingga sisi kanan dari kartu berikutnya tetap terlihat sedikit sebagai petunjuk kepada pengguna bahwa area itu bisa digeser/di-swipe!",
+      videoUrl: "https://www.youtube.com/embed/Fw95-v7WfF0",
+      externalLink: "https://www.youtube.com/watch?v=Fw95-v7WfF0"
+    },
+    {
+      day: 15, level: "advanced", levelLabel: "Pro 🏆",
+      title: "Hari 15: Arsitektur UI Mode Gelap (Dark Mode)",
       time: "25 mnt",
-      concepts: ["#HorizontalScroll", "#Carousel", "#OverflowBehavior", "#Pagination"],
-      objective: "Bangun korsel poster film yang bisa digeser dengan pengguliran horizontal dan titik halaman.",
-      dim: "Layar Seluler", radius: "16px", color: "Mode Gelap",
+      concepts: ["#DarkMode", "#VariableModes", "#Contrast"],
+      objective: "Gunakan Mode Variabel (fitur lanjutan Figma) untuk menukar skema warna seluruh antarmukamu dari Terang ke Gelap hanya dengan satu sakelar klik.",
+      dim: "Panel UI Penuh", radius: "-", color: "Abu Gelap (#121212)",
       steps: [
-        "1. Buat frame induk mewakili lebar seluler (393px).",
-        "2. Di dalamnya, buat baris Auto Layout sangat lebar berisi 5 kartu poster film besar.",
-        "3. Pastikan baris lebar melebihi frame induk.",
-        "4. Pilih frame induk, buka Prototype, atur 'Overflow behavior' ke 'Horizontal'.",
-        "5. Tambahkan 5 titik pagination. Hubungkan interaksi 'On Drag' ke koordinat X tertentu dengan aksi 'Scroll To'."
+        "1. Buka Tabel Variabel (Local Variables): Buka kembali kotak Local Variables yang kamu buat di Hari 9.",
+        "2. Tambahkan Dimensi Mode Baru: Di bagian atas kolom 'Value' warnamu, klik tanda tambah kecil '+' untuk menciptakan kolom tema nilai kedua. Beri nama kolom pertama 'Light Mode' dan kolom kedua 'Dark Mode'.",
+        "3. Petakan Warna Silang: Jika di Light Mode variabel 'Surface' nilainya Putih, ganti nilainya di kolom Dark Mode menjadi Abu Sangat Gelap (#121212). Lakukan hal kebalikan untuk warna Teks (Hitam -> Putih).",
+        "4. Bungkus Desain dalam Layer Frame: Tempatkan layar keseluruhan UI aplikasi di dalam Frame utama (F).",
+        "5. Uji Sakelar Sihir: Pilih Frame layar utama tersebut. Di panel Layer sebelah kanan (Properties), klik ikon sakelar kecil berupa kotak tumpang tindih (Layer Variable Mode), lalu ubah pengaturannya dari 'Auto' menjadi 'Dark Mode'. Seluruh halaman desainmu akan terbalik warnanya sekejap mata secara konsisten!"
       ],
-      tip: "Horizontal scrolling (Overflow behavior) sering lebih mulus daripada animasi drag kompleks untuk layar sentuh.",
-      videoUrl: "https://www.youtube.com/embed/6nlO05bMuPY",
-      externalLink: "https://www.youtube.com/watch?v=6nlO05bMuPY"
-    },
+      tip: "Untuk meminimalisir mata lelah di ruang gelap, hindari penggunaan teks putih murni mentereng (#FFFFFF) atau layar belakang hitam murni (#000000). Gunakan varian abu-abu atau aksen redup!",
+      videoUrl: "https://www.youtube.com/embed/w7m_0F-fKzE",
+      externalLink: "https://www.youtube.com/watch?v=w7m_0F-fKzE"
+    }  ,
     {
-      day: 19, level: "intermediate", levelLabel: "Menengah 🌿",
-      title: "Hari 19: Arsitektur Sistem Desain",
-      time: "40 mnt",
-      concepts: ["#DesignSystem", "#FileOrganization", "#AssetExport", "#Handoff"],
-      objective: "Strukturkan file Figma Profesional menggunakan Halaman untuk Cover, Foundations, Components, dan Screens.",
-      dim: "Struktur File", radius: "Organisasi", color: "Spesifikasi Sistem",
-      steps: [
-        "1. Buka panel Pages. Buat struktur: Cover, Foundations, Components, Screens, Archive.",
-        "2. Pindahkan semua gaya warna/teks dan ikon ke halaman 'Foundations'.",
-        "3. Pindahkan semua Komponen Induk ke halaman 'Components'. Kelompokkan dalam frame 'Inputs', 'Buttons', 'Cards'.",
-        "4. Tambahkan anotasi teks menjelaskan panduan penggunaan di samping komponen kompleks.",
-        "5. Di halaman 'Screens', gunakan HANYA instance yang menarik dari perpustakaan komponen."
-      ],
-      tip: "File yang terorganisir adalah perbedaan antara desainer junior dan senior. Jaga komponen indukmu!",
-      videoUrl: "https://www.youtube.com/embed/PNJxeD29ZTg",
-      externalLink: "https://www.youtube.com/watch?v=PNJxeD29ZTg"
-    },
-    {
-      day: 20, level: "intermediate", levelLabel: "Menengah 🌿",
-      title: "Hari 20: Prototype Peta Interaktif On-Drag",
-      time: "35 mnt",
-      concepts: ["#OnDragTrigger", "#MapInterface", "#PinchZoom", "#PrototypeState"],
-      objective: "Simulasikan antarmuka peta pan-and-scan menggunakan trigger On-Drag dan Smart Animate multiarah.",
-      dim: "Peta Layar Penuh", radius: "0px", color: "Kartografi",
-      steps: [
-        "1. Tempatkan gambar peta 2000x2000px di dalam frame ponsel (393x852px). Hapus centang 'Clip Content'.",
-        "2. Buat Frame A (peta di New York). Gandakan ke Frame B dan geser peta ke Boston.",
-        "3. Hubungkan Frame A ke B. Trigger: 'On Drag', Action: Smart Animate.",
-        "4. Hubungkan Frame B kembali ke A dengan On Drag trigger.",
-        "5. Centang kembali 'Clip Content'. Presentasikan dan seret layar untuk menggeser peta!"
-      ],
-      tip: "Trigger On Drag menghitung arah otomatis berdasarkan perbedaan koordinat layer antar frame.",
-      videoUrl: "https://www.youtube.com/embed/bh98SF7OjUk",
-      externalLink: "https://www.youtube.com/watch?v=bh98SF7OjUk"
-    },
-    {
-      day: 21, level: "pro", levelLabel: "Pro 👑",
-      title: "Hari 21: Variabel Lokal: Tema Multi-merek",
-      time: "40 mnt",
-      concepts: ["#FigmaVariables", "#DarkMode", "#ThemeModes", "#VariableCollections"],
-      objective: "Implementasikan sistem token menggunakan Figma Local Variables untuk mengubah seluruh UI antara mode Terang dan Gelap secara instan.",
-      dim: "Mesin Variabel", radius: "Variabel Global", color: "Mode Terang/Gelap",
-      steps: [
-        "1. Klik latar kanvas, lalu klik 'Local Variables' di sidebar kanan.",
-        "2. Buat Koleksi 'Primitives' dengan nilai hex mentah (misal 'blue-500', 'gray-900').",
-        "3. Buat Koleksi 'Semantic Tokens'. Buat variabel Warna bernama 'bg-primary'.",
-        "4. Klik kanan nilai 'bg-primary', alias ke 'white'. Tambahkan Mode 'Dark' dan alias ke 'gray-900'.",
-        "5. Terapkan variabel 'bg-primary' ke layar UI yang kompleks.",
-        "6. Di panel Layer, klik ikon Variables dan alihkan Light ke Dark — seluruh UI berubah instan!"
-      ],
-      tip: "Jangan pernah hardcode hex di Semantic Tokens. Selalu alias ke Primitives untuk skalabilitas penuh.",
-      videoUrl: "https://www.youtube.com/embed/BAIy0brM9r0",
-      externalLink: "https://www.youtube.com/watch?v=BAIy0brM9r0"
-    },
-    {
-      day: 22, level: "pro", levelLabel: "Pro 👑",
-      title: "Hari 22: Prototype Lanjutan dengan Variabel Matematika",
-      time: "45 mnt",
-      concepts: ["#NumberVariables", "#Expressions", "#ConditionalLogic", "#ShoppingCart"],
-      objective: "Buat keranjang belanja e-commerce fungsional menggunakan Variabel Angka, Ekspresi Matematika, dan interpolasi String.",
-      dim: "Mesin Logika", radius: "16px", color: "Data Dinamis",
-      steps: [
-        "1. Buka Local Variables, buat 2 variabel Number: itemPrice = 49, cartCount = 0.",
-        "2. Buat UI: tombol 'Add to Cart', teks kuantitas, dan teks Total Harga.",
-        "3. Ikat teks kuantitas ke variabel cartCount.",
-        "4. Pilih tombol 'Add to Cart'. Di Prototype, tambahkan On Click → Set Variable.",
-        "5. Atur cartCount ke ekspresi: cartCount + 1.",
-        "6. Tambahkan aksi Set Variable kedua: displayTotal = '$' + (itemPrice * cartCount).",
-        "7. Ikat teks Total ke displayTotal dan uji keranjang yang bisa berhitung langsung!"
-      ],
-      tip: "Kamu bisa menumpuk banyak aksi Set Variable dalam satu klik untuk membuat logika kompleks tanpa coding.",
-      videoUrl: "https://www.youtube.com/embed/XD2YR-LpufQ",
-      externalLink: "https://www.youtube.com/watch?v=XD2YR-LpufQ"
-    },
-    {
-      day: 23, level: "pro", levelLabel: "Pro 👑",
-      title: "Hari 23: Komponen Bersarang & Eksposur",
-      time: "35 mnt",
-      concepts: ["#ExposedInstances", "#NestedComponents", "#PropertyOverrides", "#AtomicDesign"],
-      objective: "Bangun organisme 'Data Table' menggunakan nesting komponen dalam dan 'Expose Nested Instances' untuk override yang efisien.",
-      dim: "Organisme Kompleks", radius: "0px", color: "Batas Sistem",
-      steps: [
-        "1. Buat komponen Atom: Teks Sel, Ikon Sel, Kotak Centang.",
-        "2. Buat komponen Molekul: Header Row dan Data Row. Sarangkan Atom ke dalamnya.",
-        "3. Buat organisme Data Table: berisi Header Row dan 5 Data Rows.",
-        "4. Pilih Komponen Induk Data Table. Klik ikon roda gigi di 'Nested Instances'.",
-        "5. Centang untuk mengekspos properti Checkbox dan Icon atom.",
-        "6. Letakkan instance — kontrol checkbox dan ikon langsung dari properties panel tingkat atas!"
-      ],
-      tip: "Mengekspos nested instances mencegah pengguna menggali 5 lapis layer hanya untuk mengganti satu ikon.",
-      videoUrl: "https://www.youtube.com/embed/rxwoox1dmo0",
-      externalLink: "https://www.youtube.com/watch?v=rxwoox1dmo0"
-    },
-    {
-      day: 24, level: "pro", levelLabel: "Pro 👑",
-      title: "Hari 24: Prototype Responsif dengan Auto Layout",
-      time: "30 mnt",
-      concepts: ["#ResponsivePrototype", "#Breakpoints", "#MinMaxWidth", "#FluidTesting"],
-      objective: "Bangun satu layar yang bertransisi mulus antara tata letak seluler, tablet, dan desktop saat diubah ukuran.",
-      dim: "Viewport Dinamis", radius: "Responsif", color: "Grid Breakpoint",
-      steps: [
-        "1. Buat frame 1440px. Atur ke Auto Layout (Vertikal, Fill Container).",
-        "2. Bangun Navigasi menggunakan 'Space Between'. Kelompokkan tautan dalam Auto Layout dan atur ke 'Wrap'.",
-        "3. Bangun Hero dengan kolom Teks Kiri dan Gambar Kanan. Atur induknya ke 'Wrap'.",
-        "4. Atur Min Width kolom Teks ke 300px, dan kolom Gambar ke 300px.",
-        "5. Atur Max Width kontainer ke 1200px dan pusatkan.",
-        "6. Seret tepi frame ke dalam — kolom bertumpuk otomatis seperti CSS media queries!"
-      ],
-      tip: "Min/Max width dan Auto Layout Wrap akhirnya memungkinkan pengujian responsif sejati langsung di kanvas Figma.",
-      videoUrl: "https://www.youtube.com/embed/1j2PpsVMt0Y",
-      externalLink: "https://www.youtube.com/watch?v=1j2PpsVMt0Y"
-    },
-    {
-      day: 25, level: "pro", levelLabel: "Pro 👑",
-      title: "Hari 25: Pemiringan 3D & Maket Perangkat Isometrik",
-      time: "40 mnt",
-      concepts: ["#Isometric", "#3DRotation", "#MockupGenerator", "#Presentation"],
-      objective: "Ubah layar UI datar menjadi maket perangkat isometrik 3D yang memukau dan siap dipresentasikan.",
-      dim: "Kanvas Presentasi", radius: "Bezel Perangkat", color: "Pencahayaan Studio",
-      steps: [
-        "1. Desain layar aplikasi seluler yang menawan (393x852).",
-        "2. Instal plugin komunitas 'Vectary 3D' atau 'Rotary'. (Alternatif: Rotasi -45deg, Skew +15deg).",
-        "3. Petakan frame UI ke model clay iPhone 3D yang disediakan plugin.",
-        "4. Sesuaikan pencahayaan, sudut bayangan, dan warna perangkat.",
-        "5. Ekspor sebagai PNG resolusi tinggi dan letakkan di presentasi gaya Dribbble.",
-        "6. Tambahkan latar mesh gradient warna-warni dan bola kaca geometris mengambang."
-      ],
-      tip: "Plugin lebih akurat dari pemiringan manual — pemiringan manual merusak teks dan bingkai.",
-      videoUrl: "https://www.youtube.com/embed/fIeE3ICmrLc",
-      externalLink: "https://www.youtube.com/watch?v=fIeE3ICmrLc"
-    },
-    {
-      day: 26, level: "pro", levelLabel: "Pro 👑",
-      title: "Hari 26: Micro-animation dengan GIF & Video Fill",
+      day: 16, level: "advanced", levelLabel: "Pro 🏆",
+      title: "Hari 16: Form Inputs & States Interaktif",
       time: "25 mnt",
-      concepts: ["#GIFFills", "#VideoIntegration", "#AnimatedPrototype", "#MicroMotion"],
-      objective: "Sematkan grafik gerak (GIF dan MP4) langsung ke komponen untuk mensimulasikan status aplikasi yang kaya.",
-      dim: "Wadah Media", radius: "24px", color: "Video Pixels",
+      concepts: ["#Forms", "#Variants", "#InteractiveComponents"],
+      objective: "Rancang komponen kotak teks isian (Text Input) berpresisi tinggi dengan varian gaya Kosong, Fokus, Berisi, dan Error.",
+      dim: "Input Lebar Fleksibel", radius: "8px", color: "Garis Tipis",
       steps: [
-        "1. Buat komponen dialog modal 'Status Berhasil'.",
-        "2. Gambar frame persegi di atas teks sebagai pengganti ikon centang statis.",
-        "3. Ubah mode Fill ke 'Video' (atau Image → GIF). Unggah animasi Lottie sebagai GIF atau MP4.",
-        "4. Atur mode pemotongan Fill ke 'Fill' atau 'Fit' sesuai rasio aspek.",
-        "5. Hubungkan tombol dari layar sebelumnya menggunakan aksi 'Open Overlay'.",
-        "6. Jalankan prototype — video/GIF langsung auto-play saat overlay muncul!"
+        "1. Susun Kerangka Dasar: Tulis dua kata: Label (misal 'Email') di atas, dan 'Masukkan email' di bawah. Pilih yang bawah (placeholder), beri jarak luar (Auto Layout) dan beri garis batas abu-abu (Stroke, 1px) dengan sudut melengkung 8px.",
+        "2. Buat Komponen Induk: Ubah tatanan isian kotak itu menjadi Komponen (Ctrl+Alt+K), lalu tambahkan Variants (tanda + di properti).",
+        "3. State 1 (Default): Ubah warna tulisan di kotak jadi abu-abu. Garis luarnya tipis abu-abu.",
+        "4. State 2 (Fokus/Mengetik): Buat Variant baru, ubah namanya jadi 'Focused'. Tebalkan garis pinggir kotak dan ubah warnanya jadi warna utama (Biru/Pink). Tambahkan baris vertikal kecil menyerupai kursor '|' berkedip.",
+        "5. State 3 (Error): Buat Variant ketiga (Error). Ubah warna teks peringatan & tepi kotak menjadi merah terang. Saat kamu membuat form, cukup panggil komponen ini dan ubah properti statusnya dari kanan tanpa menggambar ulang!"
       ],
-      tip: "GIF bagus untuk mikro-interaksi kecil, tapi MP4 jauh lebih berperforma untuk area yang luas.",
-      videoUrl: "https://www.youtube.com/embed/CZ440x65k-g",
-      externalLink: "https://www.youtube.com/watch?v=CZ440x65k-g"
+      tip: "Gunakan fitur 'Interactive Components' di prototype untuk langsung merubah status Default ke Focus ketika kotaknya diklik pengguna di layar presentasi!",
+      videoUrl: "https://www.youtube.com/embed/n3H5aL7vNlE",
+      externalLink: "https://www.youtube.com/watch?v=n3H5aL7vNlE"
     },
     {
-      day: 27, level: "pro", levelLabel: "Pro 👑",
-      title: "Hari 27: Logika Boolean & Prototype Bersyarat",
-      time: "40 mnt",
-      concepts: ["#ConditionalLogic", "#IfElse", "#FormValidation", "#Variables"],
-      objective: "Program urutan validasi kata sandi fungsional menggunakan Variabel Boolean dan blok logika If/Else.",
-      dim: "Gerbang Logika", radius: "8px", color: "Merah Error / Hijau Sukses",
+      day: 17, level: "advanced", levelLabel: "Pro 🏆",
+      title: "Hari 17: Animasi Transisi Halaman Cerdas",
+      time: "20 mnt",
+      concepts: ["#SmartAnimate", "#PageTransitions", "#MatchingLayers"],
+      objective: "Animasi dari bentuk kartu produk kecil yang meluas mekar menjadi halaman detail berlayar penuh menggunakan Smart Animate.",
+      dim: "Hero Gambar Ponsel", radius: "0px", color: "-",
       steps: [
-        "1. Buat variabel Boolean 'isPasswordValid' = false.",
-        "2. Desain layar Login dengan tombol 'Submit', layar 'Dasbor Sukses', dan overlay 'Modal Kesalahan'.",
-        "3. Pilih tombol Submit, tambahkan On Click → Conditional.",
-        "4. Atur kondisi IF: isPasswordValid == true.",
-        "5. Di blok IF, tambahkan: Navigate to → Success Dashboard.",
-        "6. Di blok ELSE, tambahkan: Open Overlay → Error Modal.",
-        "7. Buat toggle yang mengatur isPasswordValid ke true untuk menguji kedua jalur!"
+        "1. Desain Frame Awal: Siapkan desain kartu berukuran persegi panjang (Katakanlah produk sepatu). Beri label nama layer pada gambar sepatunya: 'HeroImage'.",
+        "2. Desain Frame Detail: Salin Frame awal ke Frame kedua (halaman detail). Di halaman kedua, seret dan perbesar ukuran kotak 'HeroImage' tersebut hingga memenuhi setengah bagian atas layar.",
+        "3. Penghubung Animasi Cerdas: Masuk mode Prototype. Tarik kabel panah dari kartu sepatu di Frame pertama menuju ke badan Frame kedua.",
+        "4. Mode Animasi: Di menu Interaksi, ubah opsi ke 'Smart Animate'. Ini penting: figma akan secara ajaib menyadari bahwa bentuk 'HeroImage' di layar pertama adalah bentuk yang persis sama dengan 'HeroImage' membesar di layar kedua, lalu melengkungkannya secara otomatis dan halus!"
       ],
-      tip: "Conditional mengubah Figma dari flipbook statis menjadi mesin logika — ideal untuk usability test realistis.",
-      videoUrl: "https://www.youtube.com/embed/klru0jBXZvE",
-      externalLink: "https://www.youtube.com/watch?v=klru0jBXZvE"
+      tip: "Penamaan nama frame dan gambar sangat kritis di sini! Jika ada huruf atau spasi yang berbeda di nama elemen antara layar awal & layar akhir, fitur Smart Animate akan gagap dan berubah menjadi lompatan gambar (Dissolve) standar.",
+      videoUrl: "https://www.youtube.com/embed/RkM44oE1eYI",
+      externalLink: "https://www.youtube.com/watch?v=RkM44oE1eYI"
     },
     {
-      day: 28, level: "pro", levelLabel: "Pro 👑",
-      title: "Hari 28: Dev Mode, Serah Terima & CSS Flexbox",
+      day: 18, level: "advanced", levelLabel: "Pro 🏆",
+      title: "Hari 18: Dashboard dengan Grafik & Data",
       time: "30 mnt",
-      concepts: ["#DevMode", "#CSSHandoff", "#RedlineSpecs", "#CodeInspection"],
-      objective: "Beralih ke sudut pandang developer: audit file dengan Dev Mode, hasilkan cuplikan CSS/React, dan beri anotasi spesifikasi.",
-      dim: "Inspektur Kode", radius: "Syntax Highlighting", color: "Tema VS Code",
+      concepts: ["#DataVisualization", "#Vectors", "#DashboardUI"],
+      objective: "Desain kartu analitik dasbor menggunakan alat Pen Vector untuk membuat grafik garis (Line Chart) data statistik khusus yang halus.",
+      dim: "Dasbor Aplikasi", radius: "24px", color: "Gradien Transparan",
       steps: [
-        "1. Selesaikan tata letak kompleks. Tekan Shift + D untuk mengaktifkan Dev Mode.",
-        "2. Pilih frame Auto Layout bersarang — lihat kode CSS Flexbox di panel kanan (display: flex, gap, padding).",
-        "3. Ubah bahasa dari CSS ke React atau iOS Swift untuk lihat interpretasi platform.",
-        "4. Gunakan alat 'Measure' untuk verifikasi semua margin dan padding mematuhi sistem grid 8pt.",
-        "5. Gunakan fitur 'Annotations' untuk meninggalkan catatan developer tentang z-index atau kurva transisi."
+        "1. Mulai Rangka Grafik: Tekan pintasan 'P' pada keyboard untuk mengaktifkan alat Vector Pen.",
+        "2. Menggambar Titik Lengkung Garis: Klik di beberapa titik pada kanvas naik-turun dari kiri ke kanan. Tahan tombol klik sambil menarik garis keluar (Click & Drag) untuk mengubah sudut patahan yang kasar menjadi bukit lekukan yang meliuk mulus.",
+        "3. Warna Garis: Tutup mode Vector dengan menekan 'Enter'. Di Panel kanan 'Stroke', atur tebal garisnya menjadi 3px dan warnai cerah menyala.",
+        "4. Arsir Bawah Tanah Grafik: Duplikat garis meliukmu. Kali ini hapus Stroke-nya (Klik '-' pada seksi Stroke), dan gantikan dengan menambahkan Fill. Tutup jalur terbuka pada vektornya.",
+        "5. Terapkan Transisi Warna Linear (Gradient): Pada kotak palet warna Fill, ubah mode cat Solid di atas menjadi Linear (Gradien). Jadikan arah cat lurus dari atas ke bawah. Beri opacity 50% di atas lalu turun drastis ke 0% (transparan murni) di bagian paling bawah untuk memberi kesan pendaran elegan."
       ],
-      tip: "Desainer Pro membangun file Figma seperti developer menulis kode: Variables = tokens, Auto Layout = Flexbox, Components = React.",
-      videoUrl: "https://www.youtube.com/embed/GVUchbe86HE",
-      externalLink: "https://www.youtube.com/watch?v=GVUchbe86HE"
+      tip: "Ubah properti Vector dari sudut tajam (miter/bevel) menjadi lengkung sudut dalam dengan menekan tombol 'Bend Tool' atau menyesuaikan sudut (Corner Radius) secara massal di panel khusus vektor!",
+      videoUrl: "https://www.youtube.com/embed/w7m_0F-fKzE",
+      externalLink: "https://www.youtube.com/watch?v=w7m_0F-fKzE"
     },
     {
-      day: 29, level: "pro", levelLabel: "Pro 👑",
-      title: "Hari 29: Pengembangan Plugin & Otomatisasi",
-      time: "45 mnt",
-      concepts: ["#FigmaAPI", "#Plugins", "#Automation", "#Scripter"],
-      objective: "Tulis skrip dasar menggunakan plugin 'Scripter' untuk mengotomatiskan tugas desain yang berulang.",
-      dim: "Terminal Konsol", radius: "0px", color: "#000000",
+      day: 19, level: "advanced", levelLabel: "Pro 🏆",
+      title: "Hari 19: Tooltip Cerdas Bersarang",
+      time: "20 mnt",
+      concepts: ["#InteractiveComponents", "#Tooltips", "#HoverState"],
+      objective: "Gabungkan status interaksi sekunder di atas tombol (seperti jendela pop-up penjelas kecil ketika mouse ditahan sebentar).",
+      dim: "Tooltip Minimal", radius: "4px", color: "Gelap Pekat",
       steps: [
-        "1. Instal plugin 'Scripter' dari Komunitas Figma.",
-        "2. Jalankan Scripter — kamu akan melihat editor kode JavaScript.",
-        "3. Kita akan menulis skrip untuk membuat 10 kotak berwarna acak.",
-        "4. Contoh API: const rect = figma.createRectangle(); rect.x = i * 110;",
-        "5. Eksekusi skrip dan lihat Figma menghasilkan bentuk secara instan.",
-        "6. Tidak punya pengalaman coding? Gunakan plugin 'Automator' atau 'Similayer' untuk otomatisasi tanpa kode!"
+        "1. Tulis Pesan Pop-Up: Ketik teks pendek (misalnya: 'Klik untuk mengunduh laporan'). Beri Auto Layout, tambahkan Fill abu tua dan teks putih, lengkungkan radius menjadi 4px. Ini akan jadi desain Tooltip-mu.",
+        "2. Kombinasikan Komponen: Ambil komponen Ikon Info atau tombol. Gabungkan menjadi satu Varian Interaktif khusus. State pertama: hanya ada ikon info (Tooltip berstatus 'Hidden'/Sembunyi dengan opacity 0%).",
+        "3. Tampilkan di State Kedua: Tambahkan Varian kedua. Di varian ini, munculkan bentuk kotak panjang Tooltip tadi sedikit berada di atas ikon dengan opacity 100%.",
+        "4. Merajut Interaksi Otomatis (Hovering): Masuk panel Prototype. Hubungkan Varian 1 ke Varian 2. Pada opsi kondisi pelatuk trigger-nya ubah menjadi 'While Hovering' (Saat melayang) dan centang Smart Animate.",
+        "5. Uji Coba Lintas Halaman: Letakkan komponen ini di sembarang halamamu. Masuk mode presentasi Play. Setiap kali kursormu menyentuh tombol ikon tersebut, kotak hitam tooltip akan merangkak muncul perlahan dengan sendirinya!"
       ],
-      tip: "API Plugin Figma sangat kuat. JavaScript dasar membuka pintu untuk mengotomatiskan berjam-jam pekerjaan manual.",
-      videoUrl: "https://www.youtube.com/embed/thplNeqE9Tg",
-      externalLink: "https://www.youtube.com/watch?v=thplNeqE9Tg"
+      tip: "Selalu berikan jeda kecil (Delay) jika Tooltip-mu sangat penting namun berpotensi mengganggu saat tertutup oleh pergerakan mouse liar. Gunakan durasi 'Delay: 300ms' pada interaksi agar tooltip tidak kejang-kejang muncul-hilang seketika.",
+      videoUrl: "https://www.youtube.com/embed/t0D4W2Q-Otc",
+      externalLink: "https://www.youtube.com/watch?v=t0D4W2Q-Otc"
     },
     {
-      day: 30, level: "pro", levelLabel: "Pro 👑",
-      title: "Hari 30: Mahakarya Capstone Besar 🎓",
-      time: "60+ mnt",
-      concepts: ["#MasterCapstone", "#EndToEnd", "#DesignSystem", "#LogicPrototype"],
-      objective: "Tantangan Terakhir: Sintesiskan Variables, Auto Layout, Components, dan Logika Bersyarat menjadi prototype interaktif yang siap produksi!",
-      dim: "Rancangan Akhir", radius: "Kesempurnaan", color: "Emas Kelulusan 👑",
+      day: 20, level: "expert", levelLabel: "Master 👑",
+      title: "Hari 20: Auto Layout - Fitur Menggulung Teks Penuh",
+      time: "25 mnt",
+      concepts: ["#TextWrapping", "#FillContainer", "#Responsive"],
+      objective: "Jinakkan penataan teks dalam Auto Layout untuk menyesuaikan baris saat kartu aplikasi memanjang atau diubah dimensinya di berbagai tampilan perangkat.",
+      dim: "Kolom Artikel Panjang", radius: "-", color: "Transparan",
       steps: [
-        "1. FONDASI: Buat sistem variabel token penuh (Warna, Jarak, Radius) dengan mode Terang dan Gelap.",
-        "2. KOMPONEN: Bangun kit UI (Tombol, Input, Kartu, Navbar) dengan nested instances, boolean properties, dan interactive states.",
-        "3. TATA LETAK: Buat 3 layar fidelitas tinggi (Beranda, Detail, Pembayaran) menggunakan Auto Layout dan komponen library. Pastikan responsif penuh.",
-        "4. LOGIKA: Hubungkan semua layar. Gunakan conditional untuk validasi form, variabel angka untuk keranjang belanja, dan animasi pegas untuk transisi.",
-        "5. SERAH TERIMA: Atur file dengan teliti, jalankan Dev Mode untuk cek nilai hardcode, bagikan link prototype.",
-        "6. KELULUSAN: Rayakan! Kamu telah menguasai Figma dari nol hingga Pro! 🎉"
+        "1. Bentuk Grid Bingkai Paragraf: Buat bingkai (F) vertikal berisi sebuah gambar di atas dan blok deskripsi teks artikel tebal panjang (T) tepat di bawahnya. Bungkus semuanya dengan mode Auto Layout (Shift+A).",
+        "2. Amati Pelanggaran Layout: Coba perkecil paksa lebar bingkainya secara drastis dari sisi samping. Kamu akan melihat teks artikelnya tertabrak dan meluber keluar dari batas bingkai pembungkus secara mengerikan.",
+        "3. Mengaktifkan 'Fill Container': Klik kotak lapisan elemen teksnya saja. Di bagian panel atas Auto Layout (Resizing / Pengubahan Dimensi) di sebelah kanan, ubah properti lebarnya dari ukuran statis angka absolut (atau 'Hug') menjadi mode fleksibel: 'Fill Container' (Penuhi Kontainer).",
+        "4. Tes Tekanan Lebar: Tarik kembali lebar frame-nya maju atau mundur. Ajaib! Kini kotak lapisan teks akan menahan posisinya di batas bingkai sambil mendorong kata-katanya agar membengkok membuat baris baru di bawahnya.",
+        "5. Mengunci Ketinggian (Hug): Pastikan properti vertikal bagian tingginya (Height) disetel pada 'Hug contents' agar kotak luarnya bisa mulur ikut memanjang jika teks tumpah ruah membentuk sepuluh baris panjang!"
       ],
-      tip: "Kamu resmi menjadi Figma Pro! Keterampilan ini identik dengan yang digunakan Desainer Produk senior di perusahaan teknologi terkemuka. Kamu SIAP! 🎓👑💖",
-      videoUrl: "https://www.youtube.com/embed/rF4qdP2GWn8",
-      externalLink: "https://www.youtube.com/watch?v=rF4qdP2GWn8"
+      tip: "Kombinasi pamungkas untuk card artikel yang responsif sempurna adalah: Bingkai Induk [Lebar: Fixed/Fill] -> Kotak Teks di Dalamnya [Lebar: Fill Container, Tinggi: Hug Contents].",
+      videoUrl: "https://www.youtube.com/embed/bN5bJ-K-t9A",
+      externalLink: "https://www.youtube.com/watch?v=bN5bJ-K-t9A"
+    }  ,
+    {
+      day: 21, level: "expert", levelLabel: "Master 👑",
+      title: "Hari 21: Auto Layout Lanjutan Bersarang (Nesting)",
+      time: "25 mnt",
+      concepts: ["#NestedAutoLayout", "#ComplexGrids", "#Alignment"],
+      objective: "Buat arsitektur kompleks tata letak kartu ganda dalam ganda tanpa membuat batasan dan tata letak hancur berantakan.",
+      dim: "Menyesuaikan otomatis", radius: "-", color: "-",
+      steps: [
+        "1. Susun Tingkat Terendah: Buat blok terkecil dulu. Buat tatanan Avatar Profil bulat dan Teks Nama dalam barisan Auto Layout mendatar (Horizontal Row). Beri nama 'User Info'.",
+        "2. Buat Tingkat Menengah: Tambahkan ikon Bookmark di sebelah kanannya. Pilih blok 'User Info' tadi dan ikon Bookmark tersebut, beri Shift+A. Ubah jaraknya (Gap) jadi sangat lebar, misal mode 'Auto', agar Avatar terdorong ke paling kiri dan Bookmark ke ujung kanan.",
+        "3. Pasang Badan Konten Utama: Ketik teks deskripsi artikel besar di bawah susunan kepala profil tadi. Pilih teks itu dan juga kerangka menengah tadi. Beri Shift+A lagi menjadi blok Vertikal besar yang utuh.",
+        "4. Tambahkan Tingkat Ekstra: Sisipkan foto lebar mendatar (Header Image) ke dalam frame vertikal raksasamu tadi dan letakkan tepat di posisi atas. Beri margin, padding pinggiran sebesar 24px agar bernapas.",
+        "5. Cek Sistem Nesting: Di panel sebelah kiri, kamu harus melihat tumpukan frame berundak. Auto Layout menempel di dalam Auto Layout! Kini ubah lebar foto utamanya ke mode fleksibel ('Fill container') dan rasakan kekuatan kontrol absolut di tanganmu!"
+      ],
+      tip: "Bangunlah fondasi selalu dari elemen yang paling kecil dulu ke yang paling besar layaknya boneka Matryoshka Rusia. Hindari langsung melempar semua item lalu menekan Shift+A bersamaan karena akan menjadi bencana!",
+      videoUrl: "https://www.youtube.com/embed/P6W_bE4xK_8",
+      externalLink: "https://www.youtube.com/watch?v=P6W_bE4xK_8"
+    },
+    {
+      day: 22, level: "expert", levelLabel: "Master 👑",
+      title: "Hari 22: Desain Vektor Logo Khusus (Boolean)",
+      time: "30 mnt",
+      concepts: ["#BooleanOperations", "#Vectors", "#Union", "#Subtract"],
+      objective: "Rancang logo datar berbentuk awan geometris kompleks dengan mengukir, memotong, dan menyatukan perpotongan vektor yang mulus tanpa garis batas.",
+      dim: "200px x 200px", radius: "-", color: "Gradien Kuning",
+      steps: [
+        "1. Menumpuk Lingkaran Saling Silang: Gambar 4 lingkaran utuh bulat (tekan 'O' + seret). Susun berdekatan dan tumpang tindih hingga menyerupai formasi awan bergelombang.",
+        "2. Dasar Datar: Gambar sebuah kotak persegi panjang, ratakan ujung batas bawahnya dengan bagian bawah kumpulan lingkaran-lingkaran tadi untuk merapikan dasar awan.",
+        "3. Pilih Pasukan Geometri: Seleksi blok semua lingkaran dan kotak di layarmu secara bersamaan menggunakan klik tarik.",
+        "4. Mode Satukan (Union): Perhatikan bar atas tengah layar Figma-mu. Cari menu dengan gambar dua bentuk yang terjalin tumpang tindih (Boolean Groups). Klik ikon panah ke bawahnya, pilih opsi menu pertama 'Union Selection'. Seluruh tumpukan itu kini melebur sempurna jadi satu bentuk padat tanpa sisa pinggiran potong!",
+        "5. Eksperimen Pemotongan (Subtract): Buat bulan sabit terbalik. Taruh di tengah awan, pilih keduanya, lalu kali ini gunakan opsi 'Subtract Selection'. Kamu akan melihat bulan itu berlubang (memakan) ke dalam tubuh awanmu seperti gigitan cookie."
+      ],
+      tip: "Kekuatan tersembunyi Boolean adalah bentuknya tetap non-destruktif! Kamu masih bisa mengklik ganda kelompok 'Union' dan menggeser lingkaran awalmu di dalamnya dan efek fusi jaring akan tetap berjalan langsung secara dinamis!",
+      videoUrl: "https://www.youtube.com/embed/5-9_T1xQ15k",
+      externalLink: "https://www.youtube.com/watch?v=5-9_T1xQ15k"
+    },
+    {
+      day: 23, level: "expert", levelLabel: "Master 👑",
+      title: "Hari 23: Varian Banyak Properti (Multi-Dimensional)",
+      time: "25 mnt",
+      concepts: ["#ComplexVariants", "#MultiProperties", "#DesignSystem"],
+      objective: "Kelola sistem desain raksasa yang mewadahi tombol yang sama persis namun bisa disulap secara instan menjadi Mode Terang/Gelap, Tipe Utama/Sekunder, dan Status Kecil/Besar.",
+      dim: "Matriks Varian Lanjutan", radius: "-", color: "Tema Kompleks",
+      steps: [
+        "1. Buat Area Pembiakan Induk: Tarik komponen Tombol yang sudah ada properti 'State'-nya ke tengah kanvas lapang. Aktifkan penampung warna ungu varian.",
+        "2. Menambah Dimensi Properti 2: Di panel Kanan (seksi Properties), klik tanda (+) dan pilih 'Variant'. Ubah namanya menjadi 'Type', nilainya 'Primary'.",
+        "3. Tambah Dimensi ke-3: Klik lagi (+) dan pilih Variant, namai properti baru 'Size', nilai awal 'Large'.",
+        "4. Bikin Variasi Kuadratik (Duplikasi Lebar): Salin seluruh varian tombol di dalam bingkai tersebut. Edit set baru tombol hasil salinan itu dengan mengubah ukurannya menjadi kecil, pinggiran tipis. Di panel kanan pada set baru ini, ubah nilai pop-up properti 'Size' menjadi 'Small'.",
+        "5. Gunakan Kombinasi Dewa: Ambil (tarik dari menu tab panel Asset) komponen induk tombol barumu ke area kerja biasa di luar bingkai ungu. Cek properti di panel desain kananmu. Kamu kini bisa secara ajaib mengatur Status, Ukuran, dan Tipe tombol hanya lewat tiga klik dropdown menu pilihan tanpa menempel elemen yang berat secara manual lagi!"
+      ],
+      tip: "Sistem desain besar seperti Apple UI dan Material Design Google menggunakan Varian Multi-Dimensi ini secara radikal untuk menyimpan ratusan tipe kontrol kotak sakelar dalam satu lencana komponen saja!",
+      videoUrl: "https://www.youtube.com/embed/j_8o20O-rB0",
+      externalLink: "https://www.youtube.com/watch?v=j_8o20O-rB0"
+    },
+    {
+      day: 24, level: "expert", levelLabel: "Master 👑",
+      title: "Hari 24: Menu Menggulung Parallax Memukau",
+      time: "30 mnt",
+      concepts: ["#ScrollAnimation", "#Parallax", "#PrototypeTricks"],
+      objective: "Rancang halaman hero interaktif dengan gaya efek Parallax visual di mana latar belakang meluncur lebih lambat daripada teks atau judul di atasnya saat digeser pengguna.",
+      dim: "Layar Web Horizontal", radius: "0px", color: "-",
+      steps: [
+        "1. Setting Layar Panjang: Buat frame 'Desktop' (Layar Penuh). Sisipkan sebuah gambar tebing/pemandangan gunung lebar menutupi seluruh dimensi layar di dalamnya. Namai: 'Background Base'.",
+        "2. Duplikat Layar Kedua: Kloning frame pertama itu ke frame baru. Pada frame yang kedua ini, geser posisi foto Background Base tadi ke arah kiri sebesar 50 pixel.",
+        "3. Tambahkan Aset Lapis Utama (Foreground): Masukkan elemen teks judul 'Gunung Terjal' yang sangat besar di atas lapisan layar itu. Pada frame kedua, geser teks 'Gunung Terjal' ke kiri sejauh jarak ekstrem (sekitar 300 pixel) atau sampai nyaris tak terlihat keluar dari sisi frame.",
+        "4. Menjalin Tali Penggulung: Pindah ke menu mode Prototype. Hubungkan Frame pertama ke Frame kedua. Atur trigger-nya ke kondisi tindakan 'On Drag' (Saat digeser manual) alih-alih klik. Atur animasinya ke 'Smart Animate', set Ease Out durasi cukup 600ms lambat agar terasa megah.",
+        "5. Mainkan Bioskop Virtual: Masuk mode putar prototipe. Geser pelan layar dari kiri. Saksikan pesona kedalaman ilusi optik 3D karena perpindahan jarak pergeseran teks dan gambar di baliknya terjadi dalam kecepatan yang bervariasi asimetris (Parallax Illusion)!"
+      ],
+      tip: "Formula Parallax murni: Elemen objek jarak dekat (Foreground) harus bergerak berpindah tempat secara drastis dalam kanvas dibanding pergerakan elemen gambar layar belakang (Background).",
+      videoUrl: "https://www.youtube.com/embed/Fw95-v7WfF0",
+      externalLink: "https://www.youtube.com/watch?v=Fw95-v7WfF0"
+    },
+    {
+      day: 25, level: "expert", levelLabel: "Master 👑",
+      title: "Hari 25: Integrasi Komponen Video Prototype",
+      time: "20 mnt",
+      concepts: ["#VideoIntegration", "#Playbacks", "#Mockups"],
+      objective: "Bawa prototipe aplikasi UI ke level dewa dengan menyematkan putaran loop klip video MP4 mini sesungguhnya beresolusi tinggi.",
+      dim: "Frame Berjalan", radius: "12px", color: "-",
+      steps: [
+        "1. Unduh Video Aset: Ambil klip pergerakan pendek 3-4 detik atau render animasi gerakan mikro (.MP4).",
+        "2. Masukkan ke Bingkai Foto (Shape): Di kanvas Figma, buat Frame biasa ukuran video profil (misal 400x300). Tarik dan lepaskan file MP4 tersebut secara ajaib dari luar menu (Desktop komputermu) langsung ke atas Frame tersebut di Figma.",
+        "3. Ganti Mode Media Pengisi Layar (Fill): Di panel Kanan (Fill settings), pastikan modenya bertuliskan label ikon 'Video', dan kotak gambarnya berada pada posisi 'Fill' atau membentang penuh (bukan 'Fit' atau pas) untuk menghindari sisi bolong hitam.",
+        "4. Konfigurasi Pemutaran Putaran Tak Terbatas: Pastikan di panel Kanan menu 'Video', ikon Loop berulang (gambar panah melingkar) dicentang terang. Hilangkan tanda centang di opsi 'Audio' agar suaranya tak berisik bertabrakan saat demo.",
+        "5. Luncurkan Simulasi Hidup: Mainkan Prototype (Segitiga putar Present atas-kanan). Bumbui presentasi aplikasi fiktifmu dengan banner produk yang benar-benar bermain sinematik atau memantulkan sorotan iklan seolah-olah itu hidup! Figma bukan lagi sekadar pajangan gambar benda mati."
+      ],
+      tip: "Sematan format ekstensi video GIF tidak bisa memicu efek audio/video properties seperti auto-playback dan putaran loop (putaran selamanya) secara native dalam file mock-up Figma sefleksibel format penyematan standar .MP4 berkualitas bagus.",
+      videoUrl: "https://www.youtube.com/embed/w7m_0F-fKzE",
+      externalLink: "https://www.youtube.com/watch?v=w7m_0F-fKzE"
+    }  ,
+    {
+      day: 26, level: "expert", levelLabel: "Master 👑",
+      title: "Hari 26: Navigasi Menu Melayang (Sticky Header)",
+      time: "25 mnt",
+      concepts: ["#StickyScroll", "#FixedPositioning", "#Layouts"],
+      objective: "Ciptakan ilusi menu bar (bilah navigasi atas) yang menempel lekat terus di bagian atas saat halaman web panjang ditarik ke arah bawah guliran panjang.",
+      dim: "Baris Navigasi Atas", radius: "-", color: "Kaca Transparan Latar",
+      steps: [
+        "1. Susun Menu Bar Navigasi: Rancang kotak bilah menu atas untuk halaman Web lengkap dengan logo dan teks menu (Home, About). Tambahkan warna dengan opasitas 80% plus efek blur kaca.",
+        "2. Buat Bingkai Desktop Tinggi: Siapkan satu frame Desktop yang sangat menjulang tinggi (di atas 2000 piksel) penuh dengan gambar dan paragraf konten yang sangat panjang menjuntai ke bawah.",
+        "3. Letakkan Menu di Puncak: Tarik dan posisikan baris navigasi tadi tepat di atap (bagian atas) frame desktop super panjangmu.",
+        "4. Kunci Paku Posisi Tetap: Pada panel kanan, temukan opsi pengaturan Constraints. Setel constraint ke kombinasi jitu: 'Left & Right' dan 'Top'. Kemudian di opsi bagian Prototype, centang kotak bertuliskan: 'Fix position when scrolling' atau 'Sticky' position.",
+        "5. Validasi Efek Lem Menempel: Tekan mode Present/Play. Gunakan roda kursor mouse untuk menarik turun layar. Teks konten web akan bergulir ke arah atas layar dan tenggelam tertutupi di bawah baris menu navigasi atap kaca transparan tersebut."
+      ],
+      tip: "Elemen apa pun di Figma bisa dipaku (dipaksa menempel mati) ke posisi pinggiran layar saat digeser secara teknikal asalkan bingkai halaman luarnya memiliki fitur penggeser tumpahan (Overflow: Vertical/Horizontal) menyala!",
+      videoUrl: "https://www.youtube.com/embed/n3H5aL7vNlE",
+      externalLink: "https://www.youtube.com/watch?v=n3H5aL7vNlE"
+    },
+    {
+      day: 27, level: "expert", levelLabel: "Master 👑",
+      title: "Hari 27: Efek Hantu Melayang (Glow Hover State)",
+      time: "15 mnt",
+      concepts: ["#DropShadow", "#GlowEffects", "#InteractiveVariants"],
+      objective: "Berikan nyawa magis pada tombol ikon atau desain kartu sehingga mereka bersinar terang secara holografis kala kursor sentuh tanpa menyala norak.",
+      dim: "Satu Titik Bersinar", radius: "50%", color: "Cyan Terang Neon",
+      steps: [
+        "1. Objek Neon: Gambar ikon atau tombol gelap dengan garis neon menyala warna kontras cerah (misalnya biru cyan 100%). Konversi elemen tunggal itu menjadi master Komponen (Ctrl+Alt+K) plus variannya.",
+        "2. Manipulasi State Kedua: Pilih Variant 2 (Hover). Di panel kanan (Effects), ketuk kotak (+). Terapkan efek jenis: 'Drop Shadow'.",
+        "3. Teknik Pantulan Pendaran (Glow): Jangan atur shadow itu menjauh (set X=0, Y=0). Justru hancurkan pinggirannya dengan membuat nilainya buyar luas (Blur: 30) dan renggang (Spread: 10). Atur warna bayangannya agar persis setema (atau sedikit lebih muda) dengan cyan garis awal tadi. Naikkan opacity ke angka dominan tajam (60-80%).",
+        "4. Rakit Interaksi Mouse-masuk: Ikat benang prototype tali biru dari Varian tombol normal redup menuju Varian 2 bercahaya pendar. Ubah metode pemicunya ke kondisi mouse melayang ('While Hovering').",
+        "5. Bawa Tampil: Pasang anak tiruannya di atas panel layar pet gelap polos. Tes hasil interaksimu. Saat kursor singgah mendekat, ia akan meledakkan lingkaran partikel bersinar bak sihir pendar yang menakjubkan!"
+      ],
+      tip: "Buat pendaran lebih kaya (Glow 3D) dengan menggandakan 2 atau 3 efek drop-shadow berwarna beda dengan kombinasi blur bertahap: Shadow 1 (Blur 5), Shadow 2 (Blur 15), Shadow 3 (Blur 40). Hal ini sangat jamak di estetika Cyberpunk!",
+      videoUrl: "https://www.youtube.com/embed/RkM44oE1eYI",
+      externalLink: "https://www.youtube.com/watch?v=RkM44oE1eYI"
+    },
+    {
+      day: 28, level: "expert", levelLabel: "Master 👑",
+      title: "Hari 28: Widget Perpustakaan Tim Publik",
+      time: "20 mnt",
+      concepts: ["#TeamLibraries", "#Publishing", "#AssetPanels"],
+      objective: "Kemasi seluruh perbekalan senjata aset tombol dan sistem palet warna warna dasar filemu menjadi sistem publik (Team Library) raksasa yang bebas diseret tanpa hancur lintas seluruh desain baru.",
+      dim: "Sistem Terhubung", radius: "-", color: "Status Emas",
+      steps: [
+        "1. File Terorganisir: Pastikan semua aset dan master Komponen serta Variables warna tersimpan menumpuk di file Figma mandiri berjudul khusus 'Design System Core'.",
+        "2. Memanggil Panel Aset: Lirik pinggir sebelah paling pojok kiri atas aplikasi Figma-mu, beralih klik nama label Tab menu dari 'Layers' menjadi panel baru 'Assets'.",
+        "3. Menerbitkan Kerajaan Desain: Klik ikon buku terbuka hitam mungil berjejer (Team Library icon) di deretan paling atas menu 'Assets'. Jendela raksasa akan melesat muncul menanyakan detail aset perubahan yang baru dibuat.",
+        "4. Menulis Catatan Sinkronisasi (Commit): Tuliskan komentar (misal: 'Pembuatan Komponen Varian Tombol Pertama'). Tekan tombol publikasikan (Publish) warna biru raksasa. Tunggu Figma menyelesaikan sinkronisasi data ke cloud langit server.",
+        "5. Panen Manfaat dari Jauh: Buka layar lembar kerja kanvas halaman kosong total milik file projek yang berbeda. Kembali buka laci 'Assets' dan klik simbol buku. Centang aktifkan kotak file 'Design System Core'. Sekarang kamu bisa sesuka hati seret semua keping puzzle aset komponen tanpa takut hancur lagi!"
+      ],
+      tip: "Memisahkan (Decoupling) master file Design System berisi set master komponen dan file halaman untuk kanvas coretan kerja (Mockup project files) merupakan kewajiban bagi seluruh desainer arsitektur kelas Pro untuk kebersihan penyimpanan file!",
+      videoUrl: "https://www.youtube.com/embed/w7m_0F-fKzE",
+      externalLink: "https://www.youtube.com/watch?v=w7m_0F-fKzE"
+    },
+    {
+      day: 29, level: "expert", levelLabel: "Master 👑",
+      title: "Hari 29: Komponen Drag and Drop Lanjut",
+      time: "25 mnt",
+      concepts: ["#OnDrag", "#SliderInteractions", "#Constraints"],
+      objective: "Rancang layar slider geser level tingkat harga yang bulat penggesernya merayap mengikuti sentuhan gerak kursor atau gerak usap jari simulasi HP secara instan menempel.",
+      dim: "Jalur Batas Abu", radius: "50%", color: "-",
+      steps: [
+        "1. Menggambar Jalur Rel & Kereta Bola: Gambar garis lurus abu tebal rata membentang. Gambar bola bulat titik di paling ujung pangkal kiri garis jalur tersebut (sebagai alat penggesernya). Bungkus dengan wadah kerangka bingkai besar (Frame).",
+        "2. Kloning Rel: Buat kembaran Frame itu. Di dalam salinan Frame baru itu, tarik titik penggeser bola tersebut hingga mentok pol menabrak ujung ujung dinding kanan dari jalur lurus tersebut.",
+        "3. Sambung Pipa Interaksi: Masuk lab prototype. Arahkan konektor panah rel kereta dari lingkaran (bukan frame utuhnya) di versi titik sebelah kiri merayap menuju Frame kembarannya titik kanan yang penuh tadi.",
+        "4. Modifikasi Tarikan Gerak Alam: Ubah pemicu metode klik di panel interaction-nya (Interaction Details) jadi menu pilihan pemicu 'On Drag'. Ubah tipe animasinya: 'Smart Animate'.",
+        "5. Coba Tes Sentuhan: Uji Coba Mode Present. Arahkan jepitan mouse-mu menjepit mencubit bola bulatan awal tadi (klik kiri tahan), lalu dorong tarik perlahan membelah lintasan. Bola itu serasa meluncur magnetis lengket pas bersandar di pergerakan kursor mouse milikmu!"
+      ],
+      tip: "Kamu bisa merajut pemicu efek gerak tarikan ganda (On Drag) ke dalam lebih dari satu elemen varian arah gerak. Menggerakkan kartu vertikal buang-atas dan lempar horisontal-buang (Gaya geser aplikasi jodoh) dapat disatukan lewat logika On-Drag gabungan ini!",
+      videoUrl: "https://www.youtube.com/embed/t0D4W2Q-Otc",
+      externalLink: "https://www.youtube.com/watch?v=t0D4W2Q-Otc"
+    },
+    {
+      day: 30, level: "expert", levelLabel: "Master 👑",
+      title: "Hari 30: Penyerahan Desain Akhir (Handoff) Developer",
+      time: "20 mnt",
+      concepts: ["#DevMode", "#CSSExport", "#Handoff", "#Specs"],
+      objective: "Inspeksi hasil keringat darah desain mutakhirmu dari sisi pandang murni sebagai seorang kuli bangunan aplikasi (Programmer Web/Mobile Dev Mode) guna membangun keajaiban logika realita sesungguhnya.",
+      dim: "Layar Dev Mode", radius: "-", color: "Kode Merah Muda",
+      steps: [
+        "1. Ganti Topi Jabatan: Temukan panel tuas pengalih berbentuk simbol penulisan koding rahasia '</>' yang melayang angkuh di sekitar sudut atas kanan sebelah profil wajah pengguna (Toggle Dev Mode). Alihkan sakelarnya.",
+        "2. Pengecekan Garis Inspeksi: Layar antarmuka mendadak berubah serba fungsional teknikal (biru kehijauan kaku). Kini, klik tombol atau lapisan lencana desain pendar neon cerdas milikmu.",
+        "3. Panel Pengukuran Otomatis: Panel area kanan tidak lagi memperlihatkan properti edit cat kosmetik belaka, melainkan data koordinat CSS asli yang hidup: ukurannya, kode border-radius 24px-nya, hingga bayang-bayang CSS dan hex warnanya siap di-copy.",
+        "4. Kloning Konstruksi: Arahkan matamu melayang menembus garis batas jarak antar tiap elemen tatanan yang kini mencuat tajam terang layaknya mistar penggaris mekanik yang muncul melayang-layang.",
+        "5. Simpan Kekuatan Ini Selamanya: Kamu kini sah dan dinobatkan dengan piala lulusan master Akademi sihir desain Figma. Bekal dan ilmu sakti Handoff ini memastikan para pembuat koding Front-end Developer akan menyembah dan mencium hasil mahakarya tatanan simetris dan rapi ciptaan tanganmu seumur hidup!"
+      ],
+      tip: "Jika kamu memberikan nama varian dan nama mode warna palet dengan kaidah rapi ('Primary/Hover' atau 'Success-500'), seluruh tabel aturan Dev Mode CSS-mu ini akan tampil tersaji dengan wangi berstruktur bersih yang disukai dan dikagumi langsung dari meja programmer asli!",
+      videoUrl: "https://www.youtube.com/embed/bN5bJ-K-t9A",
+      externalLink: "https://www.youtube.com/watch?v=bN5bJ-K-t9A"
     }
   ];
 
