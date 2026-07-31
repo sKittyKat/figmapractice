@@ -1041,30 +1041,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Love Notes
   const loveNotes = [
-    { title: "Selamat Pagi Matahariku! ☀️", body: "Kamu adalah pikiran favoritku setiap hari. Jangan lupa tersenyum, tarik napas perlahan, dan ketahuilah bahwa kamu sangat dicintai!", signoff: "Selalu milikmu ❤️" },
-    { title: "Kamu Sangat Luar Biasa ✨", body: "Hanya ingin mengingatkan bahwa tawamu adalah lagu favoritku di seluruh dunia. Teruslah bersinar hari ini, cintaku!", signoff: "Dengan seluruh cintaku 🌸" },
-    { title: "Pelukan Hangat Datang 🧸", body: "Kalau aku ada di sebelahmu sekarang, aku akan memberimu pelukan beruang yang paling hangat dan tidak akan melepaskannya.", signoff: "Mengirim 1.000 ciuman 💋" },
-    { title: "Orang Favoritku 🥰", body: "Dari miliaran manusia di Bumi, menemukanmu adalah momen paling beruntung dalam hidupku. Terima kasih telah menjadi dirimu sendiri!", signoff: "Mencintaimu tanpa akhir 💖" }
+    { title: "Surat Cinta ❤️", body: "aku sayang banget kamu forever sayangku jangan lupa tetap pentingkan dirimu sendiri", signoff: "Dari Abang" },
+    { title: "Surat Cinta ❤️", body: "ayo sayang semangat kamu pasti bisa terus majuu jangan lupa energinya diisi jangan capek capek love you", signoff: "Dari Abang" },
+    { title: "Surat Cinta ❤️", body: "i love you my baby sampe kapanpun aku selalu disini sama kamu sayang walau kita sering berbeda pendapat tapi abang selalu love you", signoff: "Dari Abang" },
+    { title: "Surat Cinta ❤️", body: "aku sayang banget sama kamu ayok semangat har ini sayang ku", signoff: "Dari Abang" },
+    { title: "Surat Cinta ❤️", body: "jangan lupa mam nya duluy sebelum mengerjakan aku pasti akan selalu dukung kamu", signoff: "Dari Abang" },
+    { title: "Surat Cinta ❤️", body: "cintaku lebihd ari langit ke 50000 ke kamu jadi selalu abang love bikooy", signoff: "Dari Abang" },
+    { title: "Surat Cinta ❤️", body: "jangan capek capek ya sayang kamu akan selalu menjadi my sunshine everyday untul die", signoff: "Dari Abang" },
+    { title: "Surat Cinta ❤️", body: "kalau udah nikah nanti abang mau ajak adik jalan jalan keliling dunia", signoff: "Dari Abang" },
+    { title: "Surat Cinta ❤️", body: "adik pasti bisa !!!", signoff: "Dari Abang" },
+    { title: "Surat Cinta ❤️", body: "aku cinta banget sama kamu dah gak tau kenapa", signoff: "Dari Abang" }
   ];
-  let currentNoteIdx = 0;
 
   openNoteBtn.addEventListener('click', () => {
-    envelope.classList.toggle('open');
-    openNoteBtn.innerHTML = envelope.classList.contains('open')
-      ? '<i class="fa-solid fa-envelope"></i> Tutup Surat'
-      : '<i class="fa-solid fa-heart-open"></i> Buka Surat';
-    if (envelope.classList.contains('open')) triggerConfetti(0.5, 0.4);
-  });
-
-  newNoteBtn.addEventListener('click', () => {
-    currentNoteIdx = (currentNoteIdx + 1) % loveNotes.length;
-    const note = loveNotes[currentNoteIdx];
-    noteTitle.textContent = note.title;
-    noteBody.textContent = note.body;
-    noteSignoff.textContent = note.signoff;
+    const todayStr = new Date().toDateString();
     if (!envelope.classList.contains('open')) {
+      if (appState.lastNoteDate !== todayStr) {
+        appState.lastNoteDate = todayStr;
+        appState.lastNoteIndex = (appState.lastNoteIndex === undefined ? 0 : appState.lastNoteIndex + 1) % loveNotes.length;
+        saveState();
+      }
+      const note = loveNotes[appState.lastNoteIndex !== undefined ? appState.lastNoteIndex : 0];
+      noteTitle.textContent = note.title;
+      noteBody.textContent = note.body;
+      noteSignoff.textContent = note.signoff;
+      
       envelope.classList.add('open');
       openNoteBtn.innerHTML = '<i class="fa-solid fa-envelope"></i> Tutup Surat';
+      triggerConfetti(0.5, 0.4);
+      setTimeout(() => alert("Semangat sayangku Bika"), 300);
+    } else {
+      envelope.classList.remove('open');
+      openNoteBtn.innerHTML = '<i class="fa-solid fa-heart-open"></i> Buka Surat';
     }
   });
 
