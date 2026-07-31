@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+window.onerror = function(message, source, lineno, colno, error) {
+    document.title = "ERROR: " + message + " at line " + lineno;
+};
+</script>
+<script src="app.js"></script>
+</head>
+<body>
+<div id="gfName"></div><div id="daysTogetherNum"></div><div id="heartsSent"></div><div id="couponsRemaining"></div>
+<script>
+if (document.title.indexOf("ERROR") === -1) {
+    document.title = "OK";
+}
+</script>
+</body>
+</html>
